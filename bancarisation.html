@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bancarisation et Bourses USTM Franceville</title>
+    <link rel="stylesheet" href="./css/style.css">
+    
+    <link rel="stylesheet" href="./css/tailwind.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <!-- <link rel="stylesheet" href="../tailwind.css"> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+       
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .section {
+            background-color: white;
+            padding: 25px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Autres styles */
+        .warning-box {
+            background-color: #fff8e1;
+            border-left: 5px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #ddd;
+        }
+
+        th,
+        td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        ul,
+        ol {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .comparison-div {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin: 25px 0;
+        }
+
+        .comparison-col {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .comparison-col h4 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 font-sans antialiased">
+    <!-- Header -->
+    <header class="fixed w-full bg-dark z-50 shadow-lg">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <!-- Logo externe -->
+                    <a href="./index.html" class="external-logo " target="_blank">
+                        <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center">
+                            <img src="./iconified/hahouse.png" alt="Logo AGUA" class="w-8 h-8 ">
+
+                        </div>
+                        <p class="logo-text">Retour</p>
+                    </a>
+                    <div class="flex items-center space-x-2">
+                        <div class="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center">
+                            <i class="fas fa-university text-orange-500"></i>
+                        </div>
+                        <span class="text-xl font-bold logo-text">Bancarisation</span>
+                    </div></div>
+
+                <!-- Navigation desktop -->
+                <nav class="md:block">
+                    <ul class="nav-desktop">
+                        <li>
+                            <a href="ustm.html" class="nav-item">Accueil</a>
+                        </li>
+                        <li class="group">
+                            <a href="#" class="flex items-center gap-1">
+                                Formations
+                                <i class="fas fa-chevron-down text-xs mt-1"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="http://univ-masuku.org">Ecole Doctorale en Sciences Fondamentales
+                                        Appliquées</a></li>
+                                <li><a href="https://ep-masuku.ga">Ecole Polytechnique de Masuku</a></li>
+                                <li><a href="http://univ-masuku.org">Faculté des Sciences</a></li>
+                                <li><a href="http://insab-masuku.org">Institut National Supérieur d'Agronomie et
+                                        de Biotechnologie (INSAB)</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="./inscription.html">Comment s'inscrire</a>
+                        </li>
+                        <li>
+                            <a href="./logement.html">Logement</a>
+                        </li>
+                        <li class="selected">
+                            <a href="./bancarisation.html">Bancarisation</a>
+                        </li>
+                        <li>
+                            <a href="https://univ-masuku.org/concours/">Concours EPM / INSAB</a>
+                        </li>
+                    </ul>
+                </nav>
+
+
+                <!-- Bouton mobile menu -->
+                <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+            <!-- Mobile menu -->
+            <div id="mobile-menu" class="md:hidden bg-gray-700 mt-2 rounded-lg">
+                <div class="px-2 pt-2 pb-4 space-y-1">
+                    <a href="index.html" class="mobile-menu-item">Accueil</a>
+                    <div class="px-3 py-2">
+                        <button
+                            class="flex items-center justify-between w-full text-left mobile-menu-item submenu-toggle">
+                            Formations <i class="fas fa-chevron-down text-xs"></i>
+                        </button>
+                        <div class="mt-1 ml-4 space-y-1 hidden submenu">
+                            <a href="http://univ-masuku.org"
+                                class="block px-3 py-2 rounded text-sm text-gray-300 hover:bg-gray-600">Ecole
+                                Doctorale</a>
+                            <a href="https://ep-masuku.ga"
+                                class="block px-3 py-2 rounded text-sm text-gray-300 hover:bg-gray-600">Ecole
+                                Polytechnique</a>
+                            <a href="http://univ-masuku.org"
+                                class="block px-3 py-2 rounded text-sm text-gray-300 hover:bg-gray-600">Faculté des
+                                Sciences</a>
+                            <a href="http://insab-masuku.org"
+                                class="block px-3 py-2 rounded text-sm text-gray-300 hover:bg-gray-600">INSAB</a>
+                        </div>
+                    </div>
+                    <a href="./inscription.html" class="mobile-menu-item">Comment s'inscrire</a>
+                    <a href="./logement.html" class="mobile-menu-item bg-gray-600 text-orange-400">Logement</a>
+                    <a href="./bancarisation.html" class="mobile-menu-item">Bancarisation</a>
+                    <a href="https://univ-masuku.org/concours/" class="mobile-menu-item">Concours EPM / INSAB</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Bouton retour en haut -->
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-4 bg-gradient-to-r from-orange-50 to-blue-50">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">Procédure de Bancarisation et Paiement des
+                Bourses</h1>
+        </div>
+    </section>
+    <div class="container mt-32">
+        <section class="section">
+            <h2>I. Bancarisation des Étudiants : Accès aux Services Financiers</h2>
+
+            <h3>1. Qu'est-ce que la Bancarisation ?</h3>
+            <p>La bancarisation est un processus permettant aux individus (étudiants, entreprises, populations)
+                d'accéder aux services bancaires et financiers formels. Au Gabon, elle est <strong>obligatoire</strong>
+                pour percevoir les bourses d'études, garantissant ainsi un versement sécurisé et transparent.</p>
+
+            <div class="warning-box">
+                <p>⚠️ <strong>ATTENTION</strong> : La bancarisation est accessible à toute personne résidant légalement
+                    au Gabon, sous réserve de fournir les documents nécessaires.</p>
+            </div>
+
+            <h3>2. Conditions selon la Nationalité</h3>
+
+            <div class="comparison-div">
+                <div class="comparison-col">
+                    <h4>Étudiants Gabonais (Nationaux)</h4>
+                    <p><strong>Obligation</strong> : Ouverture d'un compte bancaire dans une banque partenaire du
+                        gouvernement (ex. : BGFIBank, BICIG, UBA Gabon).</p>
+                    <p><strong>Avantages</strong> :</p>
+                    <ul>
+                        <li class="ml-7 list-disc mb-2">Paiement automatisé et sécurisé des bourses</li>
+                        <li class="ml-7 list-disc mb-2">Frais de tenue de compte réduits (voire gratuits pour les
+                            étudiants)</li>
+                        <li class="ml-7 list-disc mb-2">Carte bancaire gratuite</li>
+                        <li class="ml-7 list-disc mb-2">Virements automatiques des bourses</li>
+                        <li class="ml-7 list-disc mb-2">Traçabilité des transactions (historique disponible 24/7)</li>
+                        <li class="ml-7 list-disc mb-2">Moins de risques liés au transport d'espèces (vols, pertes)</li>
+                        <li class="ml-7 list-disc mb-2">Premier pas vers l'autonomie financière (épargne, crédit
+                            étudiant)</li>
+                    </ul>
+                </div>
+
+                <div class="comparison-col">
+                    <h4>Étudiants Étrangers (Non-Nationaux)</h4>
+                    <p><strong>Conditions</strong> :</p>
+                    <ul>
+                        <li>Certains étudiants étrangers peuvent bénéficier de bourses sous conditions (accords
+                            bilatéraux, programmes de coopération)</li>
+                        <li><strong>Obligation</strong> : Ouverture d'un compte bancaire local pour faciliter les
+                            transactions</li>
+                    </ul>
+                    <p><strong>Avantages</strong> :</p>
+                    <ul>
+                        <li class="ml-7 list-disc mb-2">Facilité de paiement des frais universitaires</li>
+                        <li class="ml-7 list-disc mb-2">Possibilité de recevoir des virements internationaux sans
+                            intermédiaires coûteux</li>
+                        <li class="ml-7 list-disc mb-2">Compte multi-devises (XAF, EUR, USD) pour les étudiants en
+                            mobilité</li>
+                        <li class="ml-7 list-disc mb-2">Possibilité de travail étudiant déclaré (paiement sur compte en
+                            règle)</li>
+                        <li class="ml-7 list-disc mb-2">Sécurité accrue (pas de transport d'espèces)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>3. Procédure d'Ouverture de Compte Bancaire</h3>
+
+            <h4>Étapes à Suivre</h4>
+            <ol>
+                <li class="ml-7"><strong>Récupérer le formulaire</strong> à la Direction des Affaires Financières (DAF)
+                    de l'université</li>
+                <li class="ml-7"><strong>Remplir le formulaire</strong> avec vos informations personnelles</li>
+                <li class="ml-7"><strong>Joindre les pièces justificatives</strong> (voir liste ci-dessous)</li>
+                <li class="ml-7"><strong>Déposer le dossier</strong> dans une agence partenaire (ex. : BICIG)</li>
+                <li class="ml-7"><strong>Activation du compte sous 72h</strong></li>
+            </ol>
+
+            <h4>Documents Requis</h4>
+            <table>
+                <tr>
+                    <th>Étudiants Nationaux</th>
+                    <th>Étudiants Non-Nationaux</th>
+                </tr>
+                <tr>
+                    <td>Carte nationale d'identité ou carte d'étudiant</td>
+                    <td>Passeport valide + visa de séjour</td>
+                </tr>
+                <tr>
+                    <td>1 photo d'identité</td>
+                    <td>2 photos d'identité</td>
+                </tr>
+                <tr>
+                    <td>Copie de l'attestation d'attribution de bourse</td>
+                    <td>Certificat de scolarité ou preuve d'inscription</td>
+                </tr>
+                <tr>
+                    <td>Certificat de scolarité</td>
+                    <td>Justificatif de domicile (ou attestation universitaire)</td>
+                </tr>
+                <tr>
+                    <td>Justificatif de domicile (ou attestation de l'université)</td>
+                    <td>Accord de bourse (le cas échéant)</td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="section">
+            <h2>II. Paiement des Bourses : Modalités et Conseils</h2>
+
+            <h3>1. Organismes Gestionnaires</h3>
+            <ul>
+                <li class="ml-7"><strong>Ministère de l'Enseignement Supérieur</strong></li>
+                <li class="ml-7"><strong>Agence Nationale des Bourses Gabonaises (ANBG)</strong></li>
+            </ul>
+
+            <div class="warning-box">
+                <p>⚠️ <strong>Restriction</strong> : Seuls les étudiants <strong>gabonais</strong> peuvent percevoir des
+                    bourses d'études au Gabon (sauf exceptions pour les bourses de coopération).</p>
+            </div>
+
+            <h3>2. Critères d'Éligibilité</h3>
+            <ul>
+                <li class="ml-7">✔ <strong>Inscription régulière</strong> dans un établissement reconnu (ex. : USTM
+                    Franceville)</li>
+                <li class="ml-7">✔ <strong>Dossier académique à jour</strong> (absence de sanctions disciplinaires)</li>
+            </ul>
+
+            <h3>3. Montant et Fréquence de Paiement</h3>
+            <ul>
+                <li class="ml-7"><strong>Montant variable</strong> selon le niveau d'études (Licence, Master, Doctorat)
+                    et critères
+                    sociaux</li>
+                <li class="ml-7"><strong>Versement mensuel</strong>, directement sur le compte bancaire de l'étudiant
+                </li>
+            </ul>
+
+            <h3>4. Problèmes Fréquents & Solutions</h3>
+            <table>
+                <tr>
+                    <th>Problème</th>
+                    <th>Solution</th>
+                </tr>
+                <tr>
+                    <td><strong>Retards de paiement</strong> (lenteurs administratives)</td>
+                    <td>Contacter le <strong>Service des Bourses</strong> ou l'ANBG</td>
+                </tr>
+                <tr>
+                    <td><strong>Dossier rejeté</strong> (pièces manquantes)</td>
+                    <td>Vérifier la conformité des documents avant dépôt</td>
+                </tr>
+                <tr>
+                    <td><strong>Compte non crédité</strong></td>
+                    <td>Vérifier régulièrement son relevé bancaire</td>
+                </tr>
+            </table>
+
+            <h3>5. Conseils Pratiques</h3>
+            <ul>
+                <li class="ml-7 mb-2">✅ <strong>Vérifier son compte</strong> après les dates annoncées de versement</li>
+                <li class="ml-7 mb-2">✅ <strong>Conserver tous les reçus</strong> (preuve de dépôt de dossier)</li>
+                <li class="ml-7 mb-2">✅ <strong>Contacter le Service des Bourses</strong> en cas de problème</li>
+            </ul>
+        </section>
+
+
+        <!-- Contact Section -->
+        <section class="bg-blue-50 rounded-xl shadow-md p-8">
+            <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                <i class="fas fa-address-card text-blue-500 mr-3"></i>
+                Contact de la BICIG
+            </h3>
+
+            <div class="contact-info grid md:grid-cols-2 gap-6">
+                <div>
+                    <h4 class="font-bold text-blue-700 mb-2 flex items-center">
+                        <i class="fas fa-map-marker-alt mr-2"> </i> Adresse
+                    </h4>
+                    <p><b>Siège social</b>: 714, Avenue du Colonel Parant, Libreville, Gabon</p>
+                    <p><b>Agence de Franceville</b>: 9JJ2+4JV Sogafric Franceville, Gabon</p>
+                    <p><b>B.P</b>: 2241 Libreville (Gabon)</p>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-blue-700 mb-2 flex items-center">
+                        <i class="fas fa-envelope mr-2"> </i> Email
+                    </h4>
+                    <p><a href="mailto:serviceclient@bicig.ga"
+                            class=" hover:text-blue-600 hover:underline">serviceclient@bicig.ga</a></p>
+                </div>
+
+
+                <div>
+                    <h4 class="font-bold text-blue-700 mb-2 flex items-center">
+                        <i class="fas fa-phone-alt mr-2"> </i> Téléphone
+                    </h4>
+                    <p>+241 11 77 77 74</p>
+                    <p>+241 11 76 26 13</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-blue-700 mb-2 flex items-center">
+                        <i class="fas fa-clock mr-2"></i> Horaires
+                    </h4>
+                    <p>Lundi-vendredi 7h30-15h30</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark foter text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center">
+                            <img src="./iconified/hahouse.png" class="w-6 h-6">
+                        </div>
+                        <span class="text-xl font-bold">AGUA</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">Accompagnement des nouveaux étudiants pour une intégration réussie.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Liens utiles</h3>
+                    <ul class="space-y-2">
+                        <li><a href="http://univ-masuku.ga/inscription/"
+                                class="text-gray-400 hover:text-white transition">Inscription en ligne</a></li>
+                        <li><a href="https://univ-masuku.org/concours/"
+                                class="text-gray-400 hover:text-white transition">Concours <span>EPM / INSAB</span></a>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Visite guidée</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Parrainage</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Événements</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Conseils académiques</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Aide au logement</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Newsletter</h3>
+                    <p class="text-gray-400 mb-4">Abonnez-vous à notre newsletter pour recevoir nos actualités.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Votre email"
+                            class="flex-grow px-4 py-2 bg-gray-700 text-white rounded-l-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                        <button type="submit" class="bg-primary hover:bg-orange-700 px-4 py-2 rounded-r-lg transition">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#"
+                            class="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center hover:bg-blue-600 transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#"
+                            class="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center hover:bg-blue-400 transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#"
+                            class="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center hover:bg-pink-600 transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#"
+                            class="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center hover:bg-blue-700 transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© <span id="year"></span> Les AGUA. Tous droits réservés.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition">Mentions légales</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">Politique de confidentialité</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">Conditions d'utilisation</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Gestion des sous-menus mobile
+        document.querySelectorAll('.submenu-toggle').forEach(button => {
+            button.addEventListener('click', () => {
+                const submenu = button.nextElementSibling;
+                submenu.classList.toggle('hidden');
+                const icon = button.querySelector('i');
+                icon.classList.toggle('fa-chevron-down');
+                icon.classList.toggle('fa-chevron-up');
+            });
+        });
+
+        // Bouton retour en haut
+        const backToTopButton = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('visible');
+            } else {
+                backToTopButton.classList.remove('visible');
+            }
+        });
+
+        backToTopButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        // Année dans le footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="fr">
+<!-- npx tailwindcss -i ./input.css -o ./tailwind.css --watch  -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGUA - Accompagnement des nouveaux étudiants</title>
+    <!-- <link rel="stylesheet" href="tailwind.css"> -->
+    <link rel="stylesheet" href="./css/tailwind.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <style>
+        .active-nav-item {
+            background-color: #f3f4f628;
+            border-left: 4px solid #3b82f6;
+            color: #e31837;
+            font-weight: 600;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            border: 1px solid #F67400;
+        }
+
+
+        #mobile-menu.open {
+            max-height: 500px;
+        }
+
+        .founder-card:hover img {
+            transform: scale(1.05);
+            border-color: #09BCE8;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 font-sans antialiased">
+    <!-- Header avec navigation -->
+    <header class="fixed  w-full bg-dark z-50 transition-all  duration-300">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center">
+                        <img src="./iconified/hahouse.png" class="w-8 h-8">
+                    </div>
+                    <span class="text-2xl font-bold logo-text ">AGUA</span>
+                </div>
+
+                <!-- Navigation desktop -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#accueil"
+                        class="text-gray-300 nav-item hover:text-orange-400 transition duration-300 font-medium">Accueil</a>
+                    <a href="#services"
+                        class="text-gray-300 nav-item hover:text-orange-400 transition duration-300 font-medium">Services</a>
+                    <a href="#apropos"
+                        class="text-gray-300 nav-item hover:text-orange-400 transition duration-300 font-medium">À
+                        propos</a>
+                    <a href="#fondateurs"
+                        class="text-gray-300 nav-item hover:text-orange-400 transition duration-300 font-medium">Fondateurs</a>
+                    <a href="#contact"
+                        class="text-gray-300 nav-item hover:text-orange-400 transition duration-300 font-medium">Contact</a>
+                    <div class="px-3 py-2">
+                        <button class="flex items-center justify-between w-full text-left mobile-menu-item submenu-tgl">
+                            Etablissements <i class="fas fa-chevron-down text-xs"></i>
+                        </button>
+                        <div class="mt-1 ml-4 space-y-1 hidden submenu">
+                            <a href="./ustm.html"
+                                class="block px-3 py-2 rounded text-sm text-gray-300 hover:bg-gray-600">USTM</a>
+                            <a href="#" class="block px-3 py-2 rounded text-sm text-gray-300 hover:bg-gray-600">UOB</a>
+
+                        </div>
+                </nav>
+
+                <!-- Bouton mobile menu -->
+                <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+            <!-- Mobile menu -->
+            <div id="mobile-menu" class="md:hidden">
+                <div class="px-2 pt-2 pb-4 space-y-1">
+                    <a href="#accueil"
+                        class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-gray-700">Accueil</a>
+                    <a href="#services"
+                        class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-gray-700">Services</a>
+                    <a href="#apropos"
+                        class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-gray-700">À
+                        propos</a>
+                    <a href="#fondateurs"
+                        class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-gray-700">Fondateurs</a>
+                    <a href="#contact"
+                        class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-gray-700">Contact</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Section Hero -->
+    <section id="accueil" class="pt-32 pb-20 px-4">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 leading-tight mb-6">
+                        Bienvenue
+                        chez <span class="logo-text">AGUA</span></h1>
+                    <p class="text-lg text-gray-600 mb-8">Votre partenaire pour une intégration réussie dans votre
+                        nouvel établissement scolaire.</p>
+                    <div class="flex space-x-4">
+                        <a href="#services"
+                            class="bg-primary hover:bg-orange-700 text-white px-6 py-3 rounded-lg font-medium transition duration-300 shadow-lg hover:shadow-xl">Nos
+                            services</a>
+                        <a href="#contact"
+                            class="border-2 border-primary text-primary hover:bg-orange-50 px-6 py-3 rounded-lg font-medium transition duration-300">Nous
+                            contacter</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                        alt="Étudiants heureux" class="rounded-xl shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Services -->
+    <section id="services" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Nos Services</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Nous offrons un accompagnement complet pour
+                    faciliter
+                    votre intégration dans votre nouvel établissement.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div
+                    class="bg-gray-50 rounded-xl p-8 service-card transition duration-300 hover:bg-white border border-transparent">
+                    <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-map-marked-alt text-secondary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Visite guidée du campus</h3>
+                    <p class="text-gray-600">Découvrez les lieux clés de votre nouvel établissement avec nos guides
+                        expérimentés pour vous sentir immédiatement à l'aise.</p>
+                </div>
+
+                <!-- Service 2 -->
+                <div
+                    class="bg-gray-50 rounded-xl p-8 service-card transition duration-300 hover:bg-white border border-transparent">
+                    <div class="w-14 h-14 bg-purple-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-users text-secondary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Parrainage étudiant</h3>
+                    <p class="text-gray-600">Bénéficiez d'un parrain ou d'une marraine parmi les étudiants plus
+                        avancés
+                        pour vous guider dans vos premiers pas.</p>
+                </div>
+
+                <!-- Service 3 -->
+                <div
+                    class="bg-gray-50 rounded-xl p-8 service-card transition duration-300 hover:bg-white border border-transparent">
+                    <div class="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-calendar-alt text-secondary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Organisation d'événements</h3>
+                    <p class="text-gray-600">Participez à nos événements d'intégration spécialement conçus pour
+                        faciliter les rencontres et créer des liens.</p>
+                </div>
+
+                <!-- Service 4 -->
+                <div
+                    class="bg-gray-50 rounded-xl p-8 service-card transition duration-300 hover:bg-white border border-transparent">
+                    <div class="w-14 h-14 bg-yellow-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-book text-secondary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Conseils académiques</h3>
+                    <p class="text-gray-600">Obtenez des conseils pratiques sur les méthodes de travail, les
+                        ressources
+                        disponibles et l'organisation de votre temps.</p>
+                </div>
+
+                <!-- Service 5 -->
+                <div
+                    class="bg-gray-50 rounded-xl p-8 service-card transition duration-300 hover:bg-white border border-transparent">
+                    <div class="w-14 h-14 bg-red-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-home text-secondary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Aide au logement</h3>
+                    <p class="text-gray-600">Nous vous aidons à trouver un logement adapté à vos besoins et à votre
+                        budget près de votre établissement.</p>
+                </div>
+
+                <!-- Service 6 -->
+                <div
+                    class="bg-gray-50 rounded-xl p-8 service-card transition duration-300 hover:bg-white border border-transparent">
+                    <div class="w-14 h-14 bg-indigo-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-hands-helping text-secondary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Support administratif</h3>
+                    <p class="text-gray-600">Nous vous accompagnons dans les démarches administratives souvent
+                        complexes
+                        des nouveaux étudiants.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section À propos -->
+    <section id="apropos" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-10 lg:mb-0 lg:pr-10">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80"
+                        alt="Équipe AGUA" class="rounded-xl shadow-xl">
+                </div>
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">À propos de <span
+                            class="logo-text">AGUA</span></h2>
+                    <p class="text-gray-600 mb-4">Fondée en 2025, AGUA est née de la volonté d'aider les nouveaux
+                        étudiants à surmonter les défis de l'intégration dans un nouvel établissement scolaire.</p>
+                    <p class="text-gray-600 mb-4">Notre mission est de créer un environnement accueillant et
+                        inclusif où
+                        chaque nouvel étudiant peut s'épanouir pleinement dès son arrivée.</p>
+                    <p class="text-gray-600 mb-8">Avec plus de 500 étudiants accompagnés chaque année, notre équipe
+                        passionnée met tout en œuvre pour faciliter cette transition importante dans la vie d'un
+                        étudiant.</p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                        <div class="bg-white p-4 rounded-lg shadow text-center">
+                            <div
+                                class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                                <i class="fas fa-user-graduate text-secondary"></i>
+                            </div>
+                            <p class="text-2xl font-bold text-gray-800">500+</p>
+                            <p class="text-gray-600">Étudiants accompagnés</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow text-center">
+                            <div
+                                class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                                <i class="fas fa-school text-secondary"></i>
+                            </div>
+                            <p class="text-2xl font-bold text-gray-800">20+</p>
+                            <p class="text-gray-600">Établissements partenaires</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow text-center">
+                            <div
+                                class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                                <i class="fas fa-smile-beam text-secondary"></i>
+                            </div>
+                            <p class="text-2xl font-bold text-gray-800">98%</p>
+                            <p class="text-gray-600">Satisfaction</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Fondateurs -->
+    <section id="fondateurs" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Nos Fondateurs</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Découvrez l'équipe passionnée à l'origine de AGUA
+                </p>
+            </div>
+
+            <div class="flex flex-col md:flex-row justify-center gap-8 max-w-5xl mx-auto">
+                <!-- Fondateur 1 -->
+                <div
+                    class="founder-card bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 transition duration-300">
+                    <div class="overflow-hidden h-64">
+                        <img src="./images/guims.png" alt="GUIMAPI Desmond"
+                            class="w-full h-65 object-cover transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-1">Desmond GUIMAPI</h3>
+                        <p class="text-blue-500 font-medium mb-3">Co-fondateur & Directeur</p>
+                        <p class="text-gray-600">Desmond, ayant rencontré des défis d'intégration en tant
+                            qu'étudiant, a imaginé et développé une solution concrète <br>pour faciliter l'arrivée des
+                            nouveaux sur le campus.</p>
+                        <div class="flex mt-4 space-x-3">
+                            <a href="#"
+                                class="w-8 h-8 text-gray-500 bg-purple-100 rounded-full flex items-center justify-center hover:text-blue-500 hover:bg-purple-200"><i
+                                    class="fab fa-linkedin-in"></i></a>
+                            <a href="#"
+                                class="w-8 h-8 text-gray-500 bg-purple-100 rounded-full flex items-center justify-center hover:text-blue-500 hover:bg-purple-200"><i
+                                    class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fondateur 2 -->
+                <div
+                    class="founder-card bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 transition duration-300">
+                    <div class="overflow-hidden h-64">
+                        <img src="./images/ktny.png" alt="AKELE NZUE Kourtney"
+                            class="w-full h-65 object-cover  transition duration-500" width="300" height="100">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-1">Kourtney AKELE</h3>
+                        <p class="text-purple-500 font-medium mb-3">Co-fondatrice & Responsable pédagogique</p>
+                        <p class="text-gray-600 ">Étudiante passionnée, Kourtney met son expertise pédagogique
+                            <br>au service
+                            de l'USTM pour créer un programme d'accompagnement innovant, facilitant l'intégration et
+                            améliorant la vie étudiante.</p>
+                        <div class="flex mt-4 space-x-3">
+                            <a href="#"
+                                class="w-8 h-8 text-gray-500 bg-blue-100 rounded-full flex items-center justify-center hover:text-purple-500 hover:bg-blue-200 transition"><i
+                                    class="fab fa-linkedin-in"></i></a>
+                            <a href="#"
+                                class="w-8 h-8 text-gray-500 bg-blue-100 rounded-full flex items-center justify-center hover:text-purple-500 hover:bg-blue-200 transition"><i
+                                    class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="bg-white rounded-xl shadow-xl overflow-hidden">
+                <div class="flex flex-col lg:flex-row">
+                    <div class="lg:w-1/2 bg-dark p-12 text-white">
+                        <h2 class="text-3xl font-bold mb-6">Contactez-nous</h2>
+                        <p class="mb-8 opacity-90">Nous sommes là pour répondre à toutes vos questions sur nos
+                            services
+                            d'accompagnement.</p>
+
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="mr-4 mt-1">
+                                    <i class="fas fa-map-marker-alt text-xl text-secondary"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-lg">Adresse</h3>
+                                    <p class="opacity-90">
+                                        <a href="https://www.google.com/maps?q=9H92%2BRV,+Franceville" target="_blank"
+                                            class="text-secondary hover:underline">
+                                            9H92+RV Franceville, Gabon
+                                        </a>
+                                    </p>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="mr-4 mt-1">
+                                    <i class="fas fa-phone-alt text-xl text-secondary"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-lg">Téléphone</h3>
+                                    <p class="opacity-90">+241 62 94 75 66</p>
+                                    <p class="opacity-90">+241 04 21 03 84</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="mr-4 mt-1">
+                                    <i class="fas fa-envelope text-xl text-secondary"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-lg">Email</h3>
+                                    <p class="opacity-90">
+                                        <a href="mailto:contact@AGUA.ga"
+                                            class="text-secondary hover:underline">contact@AGUA.ga</a>
+                                    </p>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-12 flex space-x-4">
+                            <a href="#"
+                                class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition">
+                                <i class="fab fa-facebook-f text-secondary"></i>
+                            </a>
+                            <a href="#"
+                                class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition">
+                                <i class="fab fa-twitter text-secondary"></i>
+                            </a>
+                            <a href="#"
+                                class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition">
+                                <i class="fab fa-instagram text-secondary"></i>
+                            </a>
+                            <a href="#"
+                                class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition">
+                                <i class="fab fa-linkedin-in text-secondary"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="lg:w-1/2 p-12">
+                        <form class="space-y-6">
+                            <div>
+                                <label for="name" class="block text-gray-700 font-medium mb-2">Nom complet</label>
+                                <input type="text" id="name" placeholder="Votre nom"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition">
+                            </div>
+
+                            <div>
+                                <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+                                <input type="email" id="email" placeholder="Votre email"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition">
+                            </div>
+
+                            <div>
+                                <label for="subject" class="block text-gray-700 font-medium mb-2">Sujet</label>
+                                <input type="text" id="subject" placeholder="Objet de votre message"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition">
+                            </div>
+
+                            <div>
+                                <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+                                <textarea id="message" rows="4" placeholder="Votre message"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition"></textarea>
+                            </div>
+
+                            <button type="submit"
+                                class="w-full bg-primary hover:bg-orange-700 text-white px-6 py-3 rounded-lg font-medium transition duration-300 shadow-lg hover:shadow-xl">Envoyer
+                                le message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center">
+                            <img src="./templ/iconified/hahouse.png" class="w-6 h-6">
+                        </div>
+                        <span class="text-xl font-bold">AGUA</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">Accompagnement des nouveaux étudiants pour une intégration réussie.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Liens rapides</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#accueil" class="text-gray-400 hover:text-white transition">Accueil</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition">Services</a></li>
+                        <li><a href="#apropos" class="text-gray-400 hover:text-white transition">À propos</a></li>
+                        <li><a href="#fondateurs" class="text-gray-400 hover:text-white transition">Fondateurs</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Visite guidée</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Parrainage</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Événements</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Conseils académiques</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Aide au logement</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Newsletter</h3>
+                    <p class="text-gray-400 mb-4">Abonnez-vous à notre newsletter pour recevoir nos actualités.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Votre email"
+                            class="flex-grow px-4 py-2 bg-gray-700 text-white rounded-l-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                        <button type="submit" class="bg-primary hover:bg-orange-700 px-4 py-2 rounded-r-lg transition">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#"
+                            class="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center hover:bg-blue-600 transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#"
+                            class="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center hover:bg-blue-400 transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#"
+                            class="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center hover:bg-pink-600 transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#"
+                            class="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center hover:bg-blue-700 transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© <span id="year"></span> Les AGUA. Tous droits réservés.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition">Mentions légales</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">Politique de confidentialité</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">Conditions d'utilisation</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('open');
+        });
+
+        // Gestion des sous-menus mobile
+        document.querySelectorAll('.submenu-tgl').forEach(button => {
+            button.addEventListener('click', () => {
+                const submenu = button.nextElementSibling;
+                submenu.classList.toggle('hidden');
+                const icon = button.querySelector('i');
+                icon.classList.toggle('fa-chevron-down');
+                icon.classList.toggle('fa-chevron-up');
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                // Close mobile menu if open
+                mobileMenu.classList.remove('open');
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 20,
+                        behavior: 'smooth'
+                    });
+
+                    // Update active nav item
+                    document.querySelectorAll('.nav-item').forEach(item => {
+                        item.classList.remove('active-nav-item');
+                    });
+                    this.classList.add('active-nav-item');
+                }
+            });
+        });
+
+        // Add shadow to header on scroll
+        window.addEventListener('scroll', function () {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-lg');
+            } else {
+                header.classList.remove('shadow-lg');
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            // Année courante dans le footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+        });
+    </script>
+</body>
+
+</html>

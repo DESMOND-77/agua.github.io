@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>USTM - Université des Sciences et Techniques de Masuku</title>
+  <meta name="description" content="Site officiel de l'Université des Sciences et Techniques de Masuku (USTM) au Gabon">
+  <meta name="keywords" content="USTM, université Gabon, formations scientifiques, EPM, INSAB">
+  <meta name="author" content="GUIMAPI Desmond">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="googlebot" content="noindex,nofollow">
+
+  <link rel="shortcut icon" href="./iconified/hahouse.png">
+
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/tailwind.css">
+  <link rel="stylesheet" href="./css/common.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="js/modernizr-1.5.min.js" async></script>
+
+</head>
+
+<body>
+  <!-- <div id="main"> -->
+  <header class="fixed w-full bg-dark z-50 top-0 shadow-lg">
+    <div class="container mx-auto px-6 py-4">
+      <div class="flex justify-between items-center">
+        <div class="flex items-center space-x-2">
+          <!-- Logo externe -->
+          <a href="./index.html" class="external-logo " target="_self" rel="noopener noreferrer">
+            <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center">
+              <img src="./iconified/hahouse.png" alt="AGUA" class="w-8 h-8">
+            </div>
+            <span class="logo-text">Retour</span>
+          </a>
+
+          <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center">
+            <i class="fas fa-bank text-orange-500"></i>
+          </div>
+          <span class="text-xl font-bold logo-text">USTM</span>
+        </div>
+        <!-- Navigation desktop -->
+        <nav class="md:block">
+          <ul class="nav-desktop">
+            <li class="selected">
+              <a href="index.html" class="nav-item">Accueil</a>
+            </li>
+            <li class="group">
+              <a href="#" class="flex items-center gap-1">
+                Formations
+                <i class="fas fa-chevron-down text-xs mt-1"></i>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="http://univ-masuku.org">Ecole Doctorale en Sciences Fondamentales
+                    Appliquées</a></li>
+                <li><a href="https://ep-masuku.ga">Ecole Polytechnique de Masuku</a></li>
+                <li><a href="http://univ-masuku.org">Faculté des Sciences</a></li>
+                <li><a href="http://insab-masuku.org">Institut National Supérieur d'Agronomie et
+                    de Biotechnologie (INSAB)</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="./inscription.html">Comment s'inscrire</a>
+            </li>
+            <li>
+              <a href="./logement.html">Logement</a>
+            </li>
+            <li>
+              <a href="./bancarisation.html">Bancarisation</a>
+            </li>
+            <li>
+              <a href="https://univ-masuku.org/concours/">Concours EPM / INSAB</a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Bouton mobile menu -->
+        <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
+      </div>
+
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="md:hidden bg-gray-700 mt-2 rounded-lg">
+        <div class="px-2 pt-2 pb-4 space-y-1 justify-center">
+          <a href="index.html" class="mobile-menu-item">Accueil</a>
+          <div class="px-3 py-2">
+            <button class="flex items-center justify-between w-full text-left mobile-menu-item">
+              Formations <i class="fas fa-chevron-down text-xs"></i>
+            </button>
+            <div class="mt-1 ml-4 space-y-1 hidden">
+              <a href="http://univ-masuku.org"
+                class="block px-3 py-2 rounded text-sm text-gray-300 hover:bg-gray-600">Ecole
+                Doctorale</a>
+              <a href="https://ep-masuku.ga"
+                class="block px-3 py-2 rounded text-sm text-gray-300 hover:bg-gray-600">Ecole
+                Polytechnique</a>
+              <a href="http://univ-masuku.org"
+                class="block px-3 py-2 rounded text-sm text-gray-300 hover:bg-gray-600">Faculté des
+                Sciences</a>
+              <a href="http://insab-masuku.org"
+                class="block px-3 py-2 rounded text-sm text-gray-300 hover:bg-gray-600">INSAB</a>
+            </div>
+          </div>
+          <a href="./inscription.html" class="mobile-menu-item">Comment s'inscrire</a>
+          <a href="./logement.html" class="mobile-menu-item">Logement</a>
+          <a href="./bancarisation.html" class="mobile-menu-item bg-gray-600 text-orange-400">Bancarisation</a>
+          <a href="https://univ-masuku.org/concours/" class="mobile-menu-item">Concours EPM / INSAB</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div id="site_content" class="container mx-auto mt-16 grid md:grid md:grid-cols-2  gap-2 px-4 pt-7">
+    <aside id="sidebar_container" class="order-2">
+      <section id="recteur_div">
+        <div id="avatar_recteur">
+          <img src="images/bil1.jpg" alt="Professeur Bill Raphaël BIKANGA" loading="lazy">
+          <div id="avatar_recteur_titre">
+            <span class="bill">Professeur Bill Raphaël BIKANGA</span>
+            <span>Le Recteur de l'USTM</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="gallery">
+        <h2>L'USTM en images</h2>
+        <div class="images-slider">
+          <ul class="images">
+            <li class="show"><img src="images/img1.jpg" alt="photo_one" /></li>
+            <li><img src="images/img2.jpg" alt="photo_two" /></li>
+            <li><img src="images/img3.jpg" alt="photo_three" /></li>
+            <li><img src="images/img4.jpg" alt="photo_four" /></li>
+            <li><img src="images/img5.jpg" alt="photo_five" /></li>
+            <li><img src="images/img6.jpg" alt="photo_six" /></li>
+            <li><img src="images/img7.jpg" alt="photo_seven" /></li>
+            <li><img src="images/img8.jpg" alt="photo_eight" /></li>
+          </ul>
+        </div>
+      </section>
+    </aside>
+
+    <main id="content" class="order-1">
+      <article>
+        <h1>USTM : Université des Sciences et Techniques de Masuku</h1>
+        <figure>
+          <img src="./images/ustmNew.jpg" alt="Vue du campus USTM" loading="lazy">
+        </figure>
+        <p>L'université des sciences et techniques de Masuku (USTM)
+          est un établissement public d'enseignement supérieur situé à Franceville dans la province du Haut-Ogooué, au
+          Sud-Est du Gabon créée en 1986 conformément aux dispositions de la
+          loi N°7/85 et par le transfert, de Libreville à Franceville, de la Faculté des Sciences, de l'École
+          Nationale Supérieure d'Ingénieurs de Libreville (ENSIL), devenue École polytechnique de Masuku (EPM).Elle a
+          été financée par le Fonds Gabonais d'Investissements avec le concours du Fonds Saoudien de
+          Développement, de la Banque Islamique de Développement et de la république Française. Ce complexe
+          universitaire a été inauguré le 30 décembre par le feu président de la république, chef de l'Etat son
+          Excellence EL hadj Omar Bongo ONDIMBA.</p>
+
+        <section class="recteurs-list">
+          <h3 class="text-black font-semibold">Historique des recteurs :</h3>
+          <ul>
+            <li class="ml-7 list-disc mb-2">Le professeur Vincent MINTSA MI-EYA de 1986 à 1990</li>
+            <li class="ml-7 list-disc mb-2">Le professeur Jacques LEBIBI de 1990 à 2008</li>
+            <li class="ml-7 list-disc mb-2">Le docteur Isaac MOUARAGADJA de 2008 à 2018</li>
+            <li class="ml-7 list-disc mb-2">Le professeur Crépin ELLA MISSANG de 2019 à 2024</li>
+          </ul>
+          <p class="current-recteur">Actuellement dirigée par le <strong>Professeur Bill Raphaël BIKANGA</strong></p>
+        </section>
+        <section class="organisation">
+          <h3>Organisation de l'USTM</h3>
+          <p>L'USTM est aujourd'hui composée de plusieurs établissements :</p>
+          <ul class="mx-3 my-2">
+            <li class="ml-7 list-disc mb-2 text-blue-800 hover:underline"><a href="http://univ-masuku.org">Ecole Doctorale en Sciences Fondamentales
+                Appliquées</a></li>
+            <li class="ml-7 list-disc mb-2 text-blue-800 hover:underline"><a href="https://ep-masuku.ga"> École polytechnique de Masuku (EPM) (génie
+                civil, électromécanique, réseau et télécommunication,
+                informatique industrielle, maintenance industrielle.)</a></li>
+            <li class="ml-7 list-disc mb-2 text-blue-800 hover:underline"><a href="http://univ-masuku.org">Faculté des sciences (chimie, biologie,
+                géologie, mathématiques-physique, physique-chimie.)</a></li>
+            <li class="ml-7 list-disc mb-2 text-blue-800 hover:underline"><a href="http://insab-masuku.org">Institut National Supérieur d’Agronomie et
+                de Biotechnologies (INSAB) (Productions Animales, Productions
+                Végétales, Agroéconomie, Génie industrielle et Alimentaire)</a></li>
+          </ul>
+          <p class="my-3">Ces établissements sont organisés en départements et laboratoires de recherche. Ils sont dotés de
+            bibliothèques, de salles de cours, de laboratoires et d'équipements modernes pour assurer une formation
+            de qualité.</p>
+          <p class="my-3">Le campus de l'USTM est également un lieu de vie étudiante dynamique, avec des activités culturelles,
+            sportives et associatives. Les étudiants peuvent participer à des clubs, des événements et des
+            compétitions pour développer leurs compétences et leur esprit d'équipe.</p>
+          <p class="my-3">En somme, l'USTM est un établissement d'enseignement supérieur de premier plan au Gabon, offrant une
+            formation de qualité dans les domaines scientifiques et techniques. Son campus moderne et dynamique
+            constitue un environnement propice à l'apprentissage et à l'épanouissement personnel des étudiants.</p>
+        </section>
+
+        <section class="mission">
+          <h2>L'université au cœur du progrès !</h2>
+          <p>Le forum USTM-Entreprises fait partie des grandes actions de gouvernance au cœur de la modernisation de
+            l'université.</p>
+          <h3 class="font-semibold">Objectifs :</h3>
+          <ul class="my-2">
+            <li class="ml-7 list-disc mb-2">Revisiter les offres de formation et curricula pour les adapter aux besoins du monde socio-économique
+              avec les partenaires industriels</li>
+            <li class="ml-7 list-disc mb-2">Développer un partenariat interactif pour plus d'ouverture de l'université avec le monde industriel
+            </li>
+          </ul>
+        </section>
+
+        <section class="institution-info">
+          <h2>Premier établissement scientifique d'Etat</h2>
+          <div class="logo-content">
+            <img src="./images/USTM.png" alt="Logo USTM" loading="lazy">
+            <div>
+              <p>Inaugurée en 1986 par le feu Président EL HADJ OMAR BONGO ONDIMBA, l'USTM est le premier
+                établissement scientifique du Gabon qui forme aussi bien dans le domaine technologique que celui des
+                sciences fondamentales.</p>
+              <p>Depuis 2007, les formations sont arrimées au système LMD et l'institution délivre des diplômes allant
+                du DUT au Doctorat.</p>
+            </div>
+          </div>
+        </section>
+      </article>
+    </main>
+  </div>
+
+  <!-- </div> -->
+  <footer class="bg-dark text-white pt-16 pb-8">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <div>
+          <div class="flex items-center space-x-2 mb-4">
+            <div class="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center">
+              <img src="./iconified/hahouse.png" class="w-6 h-6">
+            </div>
+            <span class="text-xl font-bold">AGUA</span>
+          </div>
+          <p class="text-gray-400 mb-4">Accompagnement des nouveaux étudiants pour une intégration réussie.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-bold mb-4">Liens rapides</h3>
+          <ul class="space-y-2">
+            <li><a href="#accueil" class="text-gray-400 hover:text-white transition">Accueil</a></li>
+            <li><a href="#services" class="text-gray-400 hover:text-white transition">Services</a></li>
+            <li><a href="#apropos" class="text-gray-400 hover:text-white transition">À propos</a></li>
+            <li><a href="#fondateurs" class="text-gray-400 hover:text-white transition">Fondateurs</a></li>
+            <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-bold mb-4">Services</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-400 hover:text-white transition">Visite guidée</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition">Parrainage</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition">Événements</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition">Conseils académiques</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition">Aide au logement</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-bold mb-4">Newsletter</h3>
+          <p class="text-gray-400 mb-4">Abonnez-vous à notre newsletter pour recevoir nos actualités.</p>
+          <form class="flex">
+            <input type="email" placeholder="Votre email"
+              class="flex-grow px-4 py-2 bg-gray-700 text-white rounded-l-lg focus:outline-none focus:ring-2 focus:ring-primary">
+            <button type="submit" class="bg-primary hover:bg-orange-700 px-4 py-2 rounded-r-lg transition">
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+          <div class="flex space-x-4 mt-4">
+            <a href="#"
+              class="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center hover:bg-blue-600 transition">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#"
+              class="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center hover:bg-blue-400 transition">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#"
+              class="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center hover:bg-pink-600 transition">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#"
+              class="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center hover:bg-blue-700 transition">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pt-8 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center">
+        <p class="text-gray-400 mb-4 md:mb-0">© <span id="year"></span> Les AGUA. Tous droits réservés.</p>
+        <div class="flex space-x-6">
+          <a href="#" class="text-gray-400 hover:text-white transition">Mentions légales</a>
+          <a href="#" class="text-gray-400 hover:text-white transition">Politique de confidentialité</a>
+          <a href="#" class="text-gray-400 hover:text-white transition">Conditions d'utilisation</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/jquery.js" defer></script>
+  <script src="js/image_fade.js" defer></script>
+  <script>
+    // Mobile menu toggle
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+    });
+
+    // Gestion des sous-menus mobile
+    document.querySelectorAll('.submenu-toggle').forEach(button => {
+      button.addEventListener('click', () => {
+        const submenu = button.nextElementSibling;
+        submenu.classList.toggle('hidden');
+        const icon = button.querySelector('i');
+        icon.classList.toggle('fa-chevron-down');
+        icon.classList.toggle('fa-chevron-up');
+      });
+    });
+
+    // Bouton retour en haut
+    const backToTopButton = document.getElementById('backToTop');
+
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        backToTopButton.classList.add('visible');
+      } else {
+        backToTopButton.classList.remove('visible');
+      }
+    });
+
+    backToTopButton.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        // Close mobile menu if open
+        mobileMenu.classList.remove('open');
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 20,
+            behavior: 'smooth'
+          });
+
+          // Update active nav item
+          document.querySelectorAll('.nav-item').forEach(item => {
+            item.classList.remove('active-nav-item');
+          });
+          this.classList.add('active-nav-item');
+        }
+      });
+    });
+    document.addEventListener('DOMContentLoaded', function () {
+      // Année courante dans le footer
+      document.getElementById('year').textContent = new Date().getFullYear();
+    });
+  </script>
+</body>
+
+</html>

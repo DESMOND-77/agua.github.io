@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guide d'inscription USTM - Université des Sciences et Techniques de Masuku</title>
+    <meta name="description"
+        content="Guide complet pour l'inscription à l'Université des Sciences et Techniques de Masuku (USTM) - Procédure étape par étape">
+    <meta name="keywords" content="inscription, USTM, EPM, INSAB, fiche circuit, université Gabon">
+    <meta name="author" content="GUIMAPI Desmond">
+    <meta name="robots" content="noindex,nofollow">
+    <meta name="googlebot" content="noindex,nofollow">
+    <link rel="shortcut icon" href="./iconified/hahouse.png">
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/common.css">
+
+    <link rel="stylesheet" href="./css/tailwind.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="js/modernizr-1.5.min.js" async></script>
+    <style>
+        .sidebar {
+            transition: all 0.3s ease;
+        }
+
+        .sidebar-collapsed {
+            transform: translateX(-90%);
+        }
+
+        .sidebar-expanded {
+            transform: translateX(0);
+        }
+
+        .sidebar-toggle {
+            transition: all 0.3s ease;
+        }
+
+        .sidebar-toggle-rotated {
+            transform: rotate(180deg);
+        }
+
+        .content-with-sidebar {
+            margin-left: 280px;
+            transition: margin 0.3s ease;
+        }
+
+        .content-full-width {
+            margin-left: 0;
+        }
+
+
+
+        .active-nav-item {
+            background-color: #f3f4f6;
+            border-left: 4px solid #3b82f6;
+            font-weight: 600;
+        }
+
+        .scroll-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+            z-index: 99;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            border: 1px solid #F67400;
+            /* Bordure orange au survol */
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 font-sans antialiased">
+    <!-- Header -->
+    <header class="fixed w-full bg-dark z-50 top-0 shadow-lg">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                            <!-- Logo externe -->
+                            <a href="./index.html" class="external-logo " target="_self" rel="noopener noreferrer">
+                                <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center">
+                                    <img src="./iconified/hahouse.png"
+                                        alt="AGUA" class="w-8 h-8">
+                                </div>
+                                <p class="logo-text">Retour</p>
+                            </a>
+        
+                    <div class="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center">
+                        <i class="fas fa-university text-orange-500"></i>
+                    </div>
+                    <span class="text-xl font-bold logo-text">USTM - Inscription</span>
+                </div>
+
+                <!-- Navigation desktop -->
+                <nav class="md:block">
+                    <ul class="nav-desktop">
+                        <li>
+                            <a href="ustm.html" class="nav-item">Accueil</a>
+                        </li>
+                        <li class="group">
+                            <a href="#" class="flex items-center gap-1">
+                                Formations
+                                <i class="fas fa-chevron-down text-xs mt-1"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="http://univ-masuku.org">Ecole Doctorale en Sciences Fondamentales
+                                        Appliquées</a></li>
+                                <li><a href="https://ep-masuku.ga">Ecole Polytechnique de Masuku</a></li>
+                                <li><a href="http://univ-masuku.org">Faculté des Sciences</a></li>
+                                <li><a href="http://insab-masuku.org">Institut National Supérieur d'Agronomie et
+                                        de Biotechnologie (INSAB)</a></li>
+                            </ul>
+                        </li>
+                        <li class="selected">
+                            <a href="./inscription.html">Comment s'inscrire</a>
+                        </li>
+                        <li>
+                            <a href="./logement.html">Logement</a>
+                        </li>
+                        <li>
+                            <a href="./bancarisation.html">Bancarisation</a>
+                        </li>
+                        <li>
+                            <a href="https://univ-masuku.org/concours/">Concours EPM / INSAB</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- Bouton mobile menu -->
+                <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+            <!-- Mobile menu -->
+            <div id="mobile-menu" class="md:hidden bg-gray-700 mt-2 rounded-lg">
+                <div class="px-2 pt-2 pb-4 space-y-1">
+                    <a href="index.html" class="mobile-menu-item">Accueil</a>
+                    <div class="px-3 py-2">
+                        <button class="flex items-center justify-between w-full text-left mobile-menu-item">
+                            Formations <i class="fas fa-chevron-down text-xs"></i>
+                        </button>
+                        <div class="mt-1 ml-4 space-y-1 hidden">
+                            <a href="http://univ-masuku.org"
+                                class="block px-3 py-2 rounded text-sm text-gray-300 hover:bg-gray-600">Ecole
+                                Doctorale</a>
+                            <a href="https://ep-masuku.ga"
+                                class="block px-3 py-2 rounded text-sm text-gray-300 hover:bg-gray-600">Ecole
+                                Polytechnique</a>
+                            <a href="http://univ-masuku.org"
+                                class="block px-3 py-2 rounded text-sm text-gray-300 hover:bg-gray-600">Faculté des
+                                Sciences</a>
+                            <a href="http://insab-masuku.org"
+                                class="block px-3 py-2 rounded text-sm text-gray-300 hover:bg-gray-600">INSAB</a>
+                        </div>
+                    </div>
+                    <a href="./inscription.html" class="mobile-menu-item">Comment s'inscrire</a>
+                    <a href="./logement.html" class="mobile-menu-item">Logement</a>
+                    <a href="./bancarisation.html"
+                        class="mobile-menu-item bg-gray-600 text-orange-400">Bancarisation</a>
+                    <a href="https://univ-masuku.org/concours/" class="mobile-menu-item">Concours EPM / INSAB</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Bouton retour en haut -->
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <div class="flex container  mt-16  px-4 pt-7">
+        <!-- Sidebar Navigation -->
+        <div id="sidebar"
+            class="sidebar  w-auto sticky bg-white border-r border-gray-200 p-4 sidebar-expanded  top-0  h-screen overflow-y-auto transition-transform duration-300 ease-in-out">
+            <div class=" flex justify-between items-center mb-6">
+                <h2 class="text-xl font-bold text-gray-800">Navigation</h2>
+                <button id="sidebarToggle" class="sidebar-toggle text-gray-600 hover:text-gray-900">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+            </div>
+
+            <div class="space-y-2">
+                <div class="nav-section">
+                    <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">Introduction</h3>
+                    <ul>
+                        <li class="li"><a href="#title"
+                                class="nav-item block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded">Guide de
+                                l'étudiant</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">Processus
+                        d'inscription</h3>
+                    <ul>
+                        <li class="li"><a href="#etape1"
+                                class="nav-item block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded">Étape 1:
+                                Inscription en ligne</a></li>
+                        <li class="li"><a href="#etape2"
+                                class="nav-item block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded">Étape 2:
+                                Formulaire d'inscription</a></li>
+                        <li class="li"><a href="#etape3"
+                                class="nav-item block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded">Étape 3:
+                                Suivi
+                                de la fiche</a></li>
+                        <li class="li"><a href="#etape4"
+                                class="nav-item block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded">Étape 4:
+                                Paiement des frais</a></li>
+                        <li class="li"><a href="#etape5"
+                                class="nav-item block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded">Étape 5:
+                                Finalisation</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">Sections
+                        importantes
+                    </h3>
+                    <ul>
+                        <li class="li"><a href="#etape2.1"
+                                class="nav-item block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded">Téléversement
+                                photo</a></li>
+                        <li class="li"><a href="#etape2.3"
+                                class="nav-item block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded">Identité
+                                étudiante</a></li>
+                        <li class="li"><a href="#etape2.6"
+                                class="nav-item block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded">Informations
+                                complémentaires</a></li>
+                        <li class="li"><a href="#etape2.7"
+                                class="nav-item block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded">Soumission
+                                formulaire</a></li>
+                    </ul>
+                </div>
+
+                <div class="pt-4 border-t border-gray-200">
+                    <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">Liens utiles</h3>
+                    <ul>
+                        <li class="li"><a href="http://univ-masuku.ga/inscription/"
+                                class="block px-4 py-2 text-blue-600 hover:underline"
+                                rel="noopener noreferrer">Inscription en ligne</a></li>
+                        <li class="li"><a href="https://univ-masuku.org/concours/"
+                                class="block px-4 py-2 text-blue-600 hover:underline" rel="noopener noreferrer">Concours
+                                EPM/INSAB</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div id="mainContent" class="flex-1  w-full">
+            <article class="content_inscription bg-white rounded-lg shadow-md p-6">
+                <section id="title" class=" px-4 bg-gradient-to-r from-orange-50 to-blue-50">
+                    <div class="container mx-auto text-center">
+                        <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">Guide de l'étudiant</h1>
+                        <p class="text-xl text-gray-600 max-w-3xl mx-auto">INSCRIPTION USTM</p>
+                    </div>
+                </section>
+                <section class="intro mb-10">
+                    <p class="mb-4 text-gray-700">Le but principal de ces inscriptions est de stocker les
+                        informations essentielles des étudiants dans une base de données de l'Université afin de
+                        facilité la gestion estudiantine dans l'avenir.<strong class="text-red-600"> Merci d'y
+                            insérer des
+                            informations
+                            correctes</strong> car ces dernières vous suivront tout au long de votre cursus
+                        universitaire à l'USTM.</p>
+                    <p class="mb-4 text-gray-700">Ce document a pour but d'indiquer à l'étudiant comment exercer
+                        son
+                        inscription de manière correcte et optimale. Soyez concentrés et n'hésitez pas à
+                        contacter
+                        les numéros en bas de l'écran ou de page pour vous apporter plus amples informations.
+                    </p>
+                    <h4 class="text-green-600 font-bold text-center text-lg">BONNE INSCRIPTION !</h4>
+                </section>
+
+                <section id="etape1" class="mb-10">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b pb-2">Comment s'inscrire</h2>
+                    <p class="mb-6 text-gray-700">Les inscriptions à l'Université des Sciences et Techniques de
+                        Masuku se font en ligne. Pour cela, il faut suivre les étapes suivantes:</p>
+
+                    <h2 class="text-xl font-bold text-gray-800 mb-4">Etape 1: Inscription en ligne</h2>
+                    <p class="mb-4 text-gray-700">Avant de vous inscrire, vous devez faire une inscription en
+                        ligne
+                        sur le site de l'Université des Sciences et Techniques de Masuku. Pour cela, cliquez sur
+                        le
+                        lien suivant: <a href="http://univ-masuku.ga/inscription/" class="text-blue-600 hover:underline"
+                            rel="noopener noreferrer">S'inscrire à
+                            l'USTM</a>
+                    </p>
+
+                    <p class="mb-4 text-gray-700">Après avoir cliqué sur le lien, si les inscriptions ne sont
+                        pas
+                        ouvertes vous serez redirigé vers la page ci-dessous.</p>
+                    <figure class="mb-6">
+                        <img src="./images/ins-term.png" alt="Page d'inscription fermée" loading="lazy"
+                            class="w-full max-w-2xl mx-auto border rounded-lg shadow-sm">
+                        <figcaption class="text-center text-sm text-gray-500 mt-2">Page d'inscription non
+                            disponible
+                        </figcaption>
+                    </figure>
+
+                    <p class="mb-4 text-gray-700">Une fois les inscriptions ouvertes, vous serez redirigé vers
+                        cette
+                        page où vous devrez cliquer sur l'onglet <strong class="font-semibold">Inscription</strong>
+                    </p>
+                    <figure class="mb-6">
+                        <img src="./images/ins_3.png" alt="Page d'inscription ouverte" loading="lazy"
+                            class="w-full max-w-2xl mx-auto border rounded-lg shadow-sm">
+                        <figcaption class="text-center text-sm text-gray-500 mt-2">Page d'inscription principale
+                        </figcaption>
+                    </figure>
+
+                    <div class="note bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-6">
+                        <p class="text-yellow-700"><strong>NB:</strong> Pour ce tutoriel, nous avons procédé
+                            dans le
+                            cas de l'inscription à l'EPM (Ecole Polytechnique de Masuku).</p>
+                    </div>
+
+                    <h3 id="etape1.1" class="text-lg font-bold text-gray-800 mb-3">Etape 1.1: Sélection de
+                        l'établissement</h3>
+                    <p class="mb-4 text-gray-700">Une fois sur la page d'inscription, vous devez sélectionner
+                        l'établissement pour lequel vous souhaitez vous inscrire. Choisissez l'établissement
+                        approprié en cliquant dessus.</p>
+
+                    <h3 id="etape1.2" class="text-lg font-bold text-gray-800 mb-3">Etape 1.2: Sélection de la
+                        section (Département)</h3>
+                    <p class="mb-4 text-gray-700">Suite à la sélection de l'établissement, tous les départements
+                        de
+                        l'Ecole Polytechnique de Masuku sont alors dévoilés :</p>
+                    <figure class="mb-6">
+                        <img src="./images/ins_4.png" alt="Liste des départements" loading="lazy"
+                            class="w-full max-w-2xl mx-auto border rounded-lg shadow-sm">
+                        <figcaption class="text-center text-sm text-gray-500 mt-2">Sélection du département
+                        </figcaption>
+                    </figure>
+                    <p class="mb-4 text-gray-700">Vous devez alors choisir le département dans lequel vous
+                        souhaitez
+                        vous inscrire en cliquant dessus.</p>
+
+                    <h3 id="etape1.3" class="text-lg font-bold text-gray-800 mb-3">Etape 1.3: Sélection du
+                        niveau
+                        d'étude</h3>
+                    <p class="mb-4 text-gray-700">Une fois le département choisi, vous devez sélectionner le
+                        niveau
+                        d'étude pour lequel vous souhaitez vous inscrire. Choisissez le niveau d'étude approprié
+                        en
+                        cliquant dessus.</p>
+                    <figure class="mb-6">
+                        <img src="./images/ins_5.png" alt="Liste des niveaux d'étude" loading="lazy"
+                            class="w-full max-w-2xl mx-auto border rounded-lg shadow-sm">
+                        <figcaption class="text-center text-sm text-gray-500 mt-2">Sélection du niveau d'étude
+                        </figcaption>
+                    </figure>
+                    <p class="mb-4 text-gray-700">Une fois terminé, nous passons à l'Etape 2</p>
+                </section>
+
+                <section id="etape2" class="mb-10">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b pb-2">Etape 2: Remplir le
+                        formulaire
+                        d'inscription</h2>
+                    <p class="mb-4 text-gray-700">Une fois les informations d'établissement, de département et
+                        de
+                        niveau renseignées, vous êtes redirigé vers le formulaire d'inscription.</p>
+
+                    <h3 id="etape2.1" class="text-lg font-bold text-gray-800 mb-3">Etape 2.1: Téléversement de
+                        l'image</h3>
+                    <p class="mb-4 text-gray-700">Vous devez téléverser une image de vous en cliquant sur
+                        l'icône de
+                        l'image et en sélectionnant l'image de votre choix (<span class="text-red-600">la taille
+                            de
+                            l'image ne doit pas dépasser 2Mo</span>).</p>
+                    <figure class="mb-6">
+                        <img src="./images/ins_6.png" alt="Zone de téléversement de photo" loading="lazy"
+                            class="w-full max-w-2xl mx-auto border rounded-lg shadow-sm">
+                        <figcaption class="text-center text-sm text-gray-500 mt-2">Téléversement de la photo
+                            d'identité</figcaption>
+                    </figure>
+
+                    <h3 id="etape2.2" class="text-lg font-bold text-gray-800 mb-3">Etape 2.2: Renseignement d'un
+                        matricule</h3>
+                    <p class="mb-4 text-gray-700">Deux possibilités vous sont offertes :</p>
+                    <ul class="space-y-6 mb-6">
+                        <li>
+                            <p class="mb-4 text-gray-700">Si vous êtes ancien dans l'établissement, cliquez OUI
+                                et
+                                écrivez votre matricule en un seul mot sans espaces et continuez de remplir les
+                                informations.</p>
+                            <figure class="mb-6">
+                                <img src="./images/ins_7.png" alt="Formulaire pour ancien étudiant" loading="lazy"
+                                    class="w-full max-w-2xl mx-auto border rounded-lg shadow-sm">
+                                <figcaption class="text-center text-sm text-gray-500 mt-2">Section pour anciens
+                                    étudiants</figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <p class="mb-4 text-gray-700">Si vous êtes nouveau dans l'établissement, (<span
+                                    class="text-blue-600">même si vous êtes ancien/ancienne à l'USTM, si vous
+                                    êtes
+                                    nouveau/nouvelle dans un établissement</span>) il est évident que vous
+                                n'avez
+                                pas de matricule affilié à cet établissement. Donc cliquez NON et continuez de
+                                remplir les informations.</p>
+                            <figure class="mb-6">
+                                <img src="./images/ins_8.png" alt="Formulaire pour nouvel étudiant" loading="lazy"
+                                    class="w-full max-w-2xl mx-auto border rounded-lg shadow-sm">
+                                <figcaption class="text-center text-sm text-gray-500 mt-2">Section pour nouveaux
+                                    étudiants</figcaption>
+                            </figure>
+                        </li>
+                    </ul>
+
+                    <h3 id="etape2.3" class="text-lg font-bold text-gray-800 mb-3">Etape 2.3: Identité de
+                        l'étudiant
+                    </h3>
+                    <p class="mb-4 text-gray-700">Vous devez renseigner les informations suivantes:</p>
+                    <figure class="mb-6">
+                        <img src="./images/ins_9.png" alt="Section informations personnelles" loading="lazy"
+                            class="w-full max-w-2xl mx-auto border rounded-lg shadow-sm">
+                        <figcaption class="text-center text-sm text-gray-500 mt-2">Informations personnelles de
+                            l'étudiant</figcaption>
+                    </figure>
+
+                    <h3 id="etape2.4" class="text-lg font-bold text-gray-800 mb-3">Etape 2.4: Établissement
+                        sollicité</h3>
+                    <p class="mb-4 text-gray-700">Ces informations ont été renseignées plus haut donc laissez
+                        comme
+                        tel.</p>
+                    <figure class="mb-6">
+                        <img src="./images/ins_10.png" alt="Section établissement" loading="lazy"
+                            class="w-full max-w-2xl mx-auto border rounded-lg shadow-sm">
+                        <figcaption class="text-center text-sm text-gray-500 mt-2">Informations sur
+                            l'établissement
+                        </figcaption>
+                    </figure>
+
+                    <h3 id="etape2.5" class="text-lg font-bold text-gray-800 mb-3">Etape 2.5: Informations
+                        supplémentaires</h3>
+                    <ul class="space-y-6 mb-6">
+                        <li>
+                            <p class="mb-4 text-gray-700">Si vous êtes salarié(e), cliquez sur
+                                <strong>SALARIE.E</strong> et écrivez le nom et le prénom de votre employeur et
+                                continuez de remplir les informations.
+                            </p>
+                            <figure class="mb-6">
+                                <img src="./images/ins_11.png" alt="Section statut salarié" loading="lazy"
+                                    class="w-full max-w-2xl mx-auto border rounded-lg shadow-sm">
+                                <figcaption class="text-center text-sm text-gray-500 mt-2">Section pour
+                                    étudiants
+                                    salariés</figcaption>
+                            </figure>
+                        </li>
+
+                        <li>
+                            <p class="mb-4 text-gray-700">Si vous n'êtes pas salarié(e), cliquez <strong>NON
+                                    SALARIE.E</strong> et continuez de remplir les informations.</p>
+                            <figure class="mb-6">
+                                <img src="./images/ins_12.png" alt="Section statut non salarié" loading="lazy"
+                                    class="w-full max-w-2xl mx-auto border rounded-lg shadow-sm">
+                                <figcaption class="text-center text-sm text-gray-500 mt-2">Section pour
+                                    étudiants
+                                    non salariés</figcaption>
+                            </figure>
+                        </li>
+
+                        <li>
+                            <p class="mb-4 text-gray-700">Si vous résidez au campus, vous cliquez dessus et
+                                normalement vous aurez la possibilité d'indiquer le BATIMENT et le NUMERO DE
+                                CHAMBRE.</p>
+                            <figure class="mb-6">
+                                <img src="./images/ins_13.png" alt="Section logement campus" loading="lazy"
+                                    class="w-full max-w-2xl mx-auto border rounded-lg shadow-sm">
+                                <figcaption class="text-center text-sm text-gray-500 mt-2">Section logement sur
+                                    campus</figcaption>
+                            </figure>
+                        </li>
+
+                        <li>
+                            <p class="mb-4 text-gray-700">Sinon, cliquez NON LOGE·E AU CAMPUS.</p>
+                            <figure class="mb-6">
+                                <img src="./images/ins_14.png" alt="Section non logé sur campus" loading="lazy"
+                                    class="w-full max-w-2xl mx-auto border rounded-lg shadow-sm">
+                                <figcaption class="text-center text-sm text-gray-500 mt-2">Section non logé sur
+                                    campus</figcaption>
+                            </figure>
+                        </li>
+
+                        <li>
+                            <p class="mb-4 text-gray-700">Si vous êtes boursier(e), renseignez votre numéro de
+                                bourse. Sinon laissez le champ vide.</p>
+                            <figure class="mb-6">
+                                <img src="./images/ins_15.png" alt="Section numéro de bourse" loading="lazy"
+                                    class="w-full max-w-2xl mx-auto border rounded-lg shadow-sm">
+                                <figcaption class="text-center text-sm text-gray-500 mt-2">Section bourse
+                                    étudiante
+                                </figcaption>
+                            </figure>
+                        </li>
+
+                        <li>
+                            <p class="mb-4 text-gray-700">Même principe pour le mode d'admission à l'USTM : Si
+                                vous
+                                avez passé le Baccalauréat juste avant d'arriver à l'université, cliquez sur
+                                Baccalauréat (même si vous avez fait le concours de l'INSAB ou de l'EPM avant le
+                                bac).</p>
+                            <figure class="mb-6">
+                                <img src="./images/ins_16.png" alt="Section mode d'admission" loading="lazy"
+                                    class="w-full max-w-2xl mx-auto border rounded-lg shadow-sm">
+                                <figcaption class="text-center text-sm text-gray-500 mt-2">Mode d'admission -
+                                    Baccalauréat</figcaption>
+                            </figure>
+                        </li>
+
+                        <li>
+                            <p class="mb-4 text-gray-700">Sinon, cliquez sur Examen spécial.</p>
+                            <figure class="mb-6">
+                                <img src="./images/ins_17.png" alt="Section examen spécial" loading="lazy"
+                                    class="w-full max-w-2xl mx-auto border rounded-lg shadow-sm">
+                                <figcaption class="text-center text-sm text-gray-500 mt-2">Mode d'admission -
+                                    Examen
+                                    spécial</figcaption>
+                            </figure>
+                        </li>
+                    </ul>
+
+                    <h3 id="etape2.6" class="text-lg font-bold text-gray-800 mb-3">Etape 2.6: Informations
+                        complémentaires</h3>
+                    <p class="mb-4 text-gray-700"><span class="text-red-600">Attention !!!</span> les numéros de
+                        téléphones doivent être inscrits au format <span
+                            class="font-mono bg-gray-100 px-2 py-1 rounded">+241XXXXXXXX</span></p>
+                    <figure class="mb-6">
+                        <img src="./images/ins_18.png" alt="Section informations complémentaires" loading="lazy"
+                            class="w-full max-w-2xl mx-auto border rounded-lg shadow-sm">
+                        <figcaption class="text-center text-sm text-gray-500 mt-2">Informations complémentaires
+                        </figcaption>
+                    </figure>
+
+                    <h3 id="etape2.7" class="text-lg font-bold text-gray-800 mb-3">Etape 2.7: Soumission du
+                        formulaire</h3>
+                    <p class="mb-4 text-gray-700">Après avoir pris le temps de remplir soigneusement vos
+                        informations, vous devez cocher la déclaration sur l'honneur (le petit carré vert), qui
+                        stipule que toute déclaration fausse entraine l'annulation de votre inscription. Donc
+                        faîtes
+                        preuve de responsabilité.</p>
+                    <p class="mb-4 text-gray-700">Ensuite vous soumettez vos informations en cliquant sur
+                        <strong class="text-green-600">SOUMETTRE</strong>
+                    </p>
+                    <figure class="mb-6">
+                        <img src="./images/ins_19.png" alt="Bouton de soumission" loading="lazy"
+                            class="w-full max-w-2xl mx-auto border rounded-lg shadow-sm">
+                        <figcaption class="text-center text-sm text-gray-500 mt-2">Soumission du formulaire
+                        </figcaption>
+                    </figure>
+
+                    <p class="mb-4 text-gray-700">Après avoir soumis, s'il y a des erreurs (comme un numéro de
+                        téléphone avec des lettres par exemple) elles vous seront indiquées après avoir soumis.
+                    </p>
+                    <figure class="mb-6">
+                        <img src="./images/ins_num_err.png" alt="Message d'erreur" loading="lazy"
+                            class="w-full max-w-2xl mx-auto border rounded-lg shadow-sm">
+                        <figcaption class="text-center text-sm text-gray-500 mt-2">Exemple d'erreur de saisie
+                        </figcaption>
+                    </figure>
+
+                    <p class="mb-4 text-gray-700">Vous devez alors corriger ces erreurs et soumettre à nouveau.
+                        Une
+                        fois que tout est correct, vous serez redirigé vers une page de confirmation, vous
+                        relisez
+                        vos informations au cas où vous aurez omis certains détails.</p>
+                    <figure class="mb-6">
+                        <img src="./images/ins_20_1.png" alt="Page de confirmation partie 1" loading="lazy"
+                            class="w-full max-w-2xl mx-auto border rounded-lg shadow-sm">
+                        <img src="./images/ins_20_2.png" alt="Page de confirmation partie 2" loading="lazy"
+                            class="w-full max-w-2xl mx-auto border rounded-lg shadow-sm">
+                        <figcaption class="text-center text-sm text-gray-500 mt-2">Page de confirmation des
+                            informations</figcaption>
+                    </figure>
+
+                    <p class="mb-4 text-gray-700">Si vous avez oublié quelque chose, vous avez l'opportunité de
+                        modifier en cliquant sur <span class="text-blue-600">MODIFIER</span> ou de valider votre
+                        fiche en cliquant sur <span class="text-green-600">VALIDER</span>.</p>
+                    <figure class="mb-6">
+                        <img src="./images/ins_20_3.png" alt="Options de modification" loading="lazy"
+                            class="w-full max-w-2xl mx-auto border rounded-lg shadow-sm">
+                        <figcaption class="text-center text-sm text-gray-500 mt-2">Options de
+                            modification/validation</figcaption>
+                    </figure>
+
+                    <p class="mb-4 text-gray-700">Une fois le formulaire validé, nous vous attribuons un <span
+                            class="text-red-600">Numéro d'inscrit</span>. Ce numéro, tout le monde l'aura, que
+                        vous
+                        ayez un matricule ou pas. <span class="text-blue-600">Le <span
+                                class="text-red-600">Numéro</span> permet à l'administration de faire les
+                            statistiques pour connaitre le nombre d'étudiants inscrits à l'université depuis X
+                            années.</span></p>
+                    <figure class="mb-6">
+                        <img src="./images/ins_21_1.png" alt="Numéro d'inscrit" loading="lazy"
+                            class="w-full max-w-2xl mx-auto border rounded-lg shadow-sm">
+                        <figcaption class="text-center text-sm text-gray-500 mt-2">Affichage du numéro d'inscrit
+                        </figcaption>
+                    </figure>
+
+                    <div class="important-note bg-blue-50 border-l-4 border-blue-400 p-4 mb-6">
+                        <h4 class="text-lg font-bold text-blue-800 mb-3">IMPORTANT:</h4>
+                        <p class="mb-4 text-blue-700">Tout en dessous de la fiche vous aurez un bouton qui se
+                            fera
+                            remarquer :</p>
+                        <figure class="mb-6">
+                            <img src="./images/ins_21_2.png" alt="Bouton important" loading="lazy"
+                                class="w-full max-w-2xl mx-auto border rounded-lg shadow-sm">
+                            <figcaption class="text-center text-sm text-gray-500 mt-2">Bouton d'informations
+                                importantes</figcaption>
+                        </figure>
+
+                        <p class="mb-4 text-blue-700">Cliquez dessus ! , il vous donnera des informations
+                            <strong class="font-semibold">importantes à retenir pour la suite de l'inscription
+                                !</strong> Le <u>numéro d'inscrit</u> et le <u>téléphone du tuteur</u>.
+                        </p>
+                        <figure class="mb-6">
+                            <img src="./images/ins_21_3.png" alt="Informations importantes" loading="lazy"
+                                class="w-full max-w-2xl mx-auto border rounded-lg shadow-sm">
+                            <figcaption class="text-center text-sm text-gray-500 mt-2">Informations importantes
+                                à
+                                conserver</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                <section id="etape3" class="mb-10">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b pb-2">Etape 3: Suivi de la fiche
+                    </h2>
+                    <p class="mb-4 text-gray-700">Après avoir validé votre fiche, vous devez suivre votre fiche
+                        pour
+                        voir si elle a été validée par l'administration. Une fois vous aurez mémorisé ou fait
+                        votre
+                        capture d'écran, cliquez sur <strong>RETOUR ACCUEIL</strong></p>
+
+                    <p class="mb-4 text-gray-700">Vous écrivez sur la barre de recherche votre numéro d'inscrit.
+                        Ici
+                        c'est notre étudiant qui a le numéro 10874. Ensuite automatiquement vous avez l'état du
+                        suivi de votre fiche.</p>
+
+                    <ul class="space-y-6 mb-6">
+                        <li>
+                            <p class="mb-4 text-gray-700">A ce niveau nous vous conseillons de vérifier chaque
+                                jour
+                                votre pour savoir si votre fiche a été validée ou pas.</p>
+                            <p class="mb-4 text-gray-700">En cas de rejet, le motif vous sera donné par votre
+                                établissement.</p>
+                            <figure class="mb-6">
+                                <img src="./images/ins_23.png" alt="Fiche rejetée" loading="lazy"
+                                    class="w-full max-w-2xl mx-auto border rounded-lg shadow-sm">
+                                <figcaption class="text-center text-sm text-gray-500 mt-2">Exemple de fiche
+                                    rejetée
+                                </figcaption>
+                            </figure>
+
+                            <p class="mb-4 text-gray-700">Si vous voyez cette barre rouge, lisez l'information
+                                que
+                                l'établissement vous demande.</p>
+                            <ul class="space-y-4 mb-6">
+                                <li>
+                                    <p class="mb-4 text-gray-700">S'il vous est demandé d'aller au niveau de
+                                        votre
+                                        établissement allez-y.</p>
+                                </li>
+                                <li>
+                                    <p class="mb-4 text-gray-700">S'il vous est demandé de changer quelques
+                                        informations de votre fiche (ici dans l'exemple c'est le matricule),
+                                        dans ce
+                                        cas cliquez sur Etudiant</p>
+                                    <figure class="mb-6">
+                                        <img src="./images/ins_23_1.png" alt="Option Etudiant" loading="lazy"
+                                            class="w-full max-w-2xl mx-auto border rounded-lg shadow-sm">
+                                        <figcaption class="text-center text-sm text-gray-500 mt-2">Option pour
+                                            modifier la fiche</figcaption>
+                                    </figure>
+
+                                    <p class="mb-4 text-gray-700">Ensuite vous validez. Vous aurez alors accès à
+                                        votre espace étudiant personnel. Ici, vous avez alors la possibilité de
+                                        changer vos informations rejetées et les soumettre.</p>
+                                    <figure class="mb-6">
+                                        <img src="./images/ins_24.png" alt="Modification de fiche" loading="lazy"
+                                            class="w-full max-w-2xl mx-auto border rounded-lg shadow-sm">
+                                        <figcaption class="text-center text-sm text-gray-500 mt-2">Espace de
+                                            modification de la fiche</figcaption>
+                                    </figure>
+
+                                    <p class="mb-4 text-gray-700">Notre étudiant a alors modifié l'information
+                                        demandée par l'établissement.</p>
+                                    <figure class="mb-6">
+                                        <img src="./images/ins_24_1.png" alt="Fiche modifiée" loading="lazy"
+                                            class="w-full max-w-2xl mx-auto border rounded-lg shadow-sm">
+                                        <figcaption class="text-center text-sm text-gray-500 mt-2">Fiche après
+                                            modification</figcaption>
+                                    </figure>
+
+                                    <p class="mb-4 text-gray-700">Une fois l'opération effectuée, vous aurez
+                                        cette
+                                        phrase dans votre espace étudiant.</p>
+                                    <figure class="mb-6">
+                                        <img src="./images/ins_25.png" alt="Confirmation modification" loading="lazy"
+                                            class="w-full max-w-2xl mx-auto border rounded-lg shadow-sm">
+                                        <figcaption class="text-center text-sm text-gray-500 mt-2">Confirmation
+                                            de
+                                            modification</figcaption>
+                                    </figure>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <p class="mb-4 text-gray-700">Notre étudiant continue alors sa routine journalière
+                                qui
+                                est de vérifier si l'établissement a validé sa fiche d'informations.</p>
+                            <figure class="mb-6">
+                                <img src="./images/ins_22.png" alt="Suivi de fiche" loading="lazy"
+                                    class="w-full max-w-2xl mx-auto border rounded-lg shadow-sm">
+                                <figcaption class="text-center text-sm text-gray-500 mt-2">Suivi de l'état de la
+                                    fiche</figcaption>
+                            </figure>
+                        </li>
+
+                        <li>
+                            <p class="mb-4 text-gray-700">Si votre fiche est validée, vous aurez un message de
+                                confirmation.</p>
+                            <figure class="mb-6">
+                                <img src="./images/ins_26.png" alt="Fiche validée" loading="lazy"
+                                    class="w-full max-w-2xl mx-auto border rounded-lg shadow-sm">
+                                <figcaption class="text-center text-sm text-gray-500 mt-2">Fiche validée par
+                                    l'administration</figcaption>
+                            </figure>
+
+                            <p class="mb-4 text-gray-700">Super ! En vérifiant son numéro d'inscrit, il remarque
+                                qu'elle a été validée.</p>
+                        </li>
+                    </ul>
+
+                    <div class="after_valide bg-green-50 border-l-4 border-green-400 p-4 mb-6">
+                        <p class="text-green-700">Vous devez, à cette étape, aller physiquement dans votre
+                            établissement (ou département, c'est selon) pour récupérer votre fiche qui aura le
+                            cachet de votre établissement. Bravo ! vous disposez désormais d'une inscription
+                            pédagogique validée par votre établissement. Celle-ci vous permettra désormais
+                            d'aller à
+                            la scolarité, la présenter afin de payer vos frais d'inscriptions.</p>
+                    </div>
+
+                    <p class="mb-4 text-gray-700">Une fois que vous avez payé au niveau de la scolarité, nous
+                        vous
+                        <span class="text-red-600">conseillons vivement</span> de vérifier immédiatement sur la
+                        recherche si vous voyez le message ci-dessous (avec le fond vert).
+                    </p>
+                    <figure class="mb-6">
+                        <img src="./images/ins_27.png" alt="Inscription validée et payée" loading="lazy"
+                            class="w-full max-w-2xl mx-auto border rounded-lg shadow-sm">
+                        <figcaption class="text-center text-sm text-gray-500 mt-2">Inscription complètement
+                            validée
+                        </figcaption>
+                    </figure>
+
+                    <p class="mb-4 text-gray-700">Si vous voyez ce message, c'est que vous êtes officiellement
+                        inscrit(e) à l'USTM. Vous pouvez alors commencer à suivre les cours.</p>
+                </section>
+
+                <section id="etape4" class="mb-10">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b pb-2">Etape 4: Paiement des frais
+                        d'inscription</h2>
+                    <p class="mb-4 text-gray-700">Après la validation de votre fiche, vous devez payer les frais
+                        d'inscription. Pour cela, vous devez vous rendre à la banque muni d'une photocopie de
+                        votre
+                        fiche circuit pour payer les frais d'inscription qui sont de <strong class="font-semibold">35000
+                            XFA</strong>. Vous devez payer les frais d'inscription
+                        dans
+                        un délai de 15 jours après la validation de votre fiche. Si vous ne payez pas les frais
+                        d'inscription dans ce délai, votre fiche sera annulée et vous devrez recommencer la
+                        procédure d'inscription.</p>
+                </section>
+
+                <section id="etape5" class="mb-10">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b pb-2">Etape 5: Finalisation de
+                        l'inscription</h2>
+                    <p class="mb-4 text-gray-700">Vous pouvez enfin, depuis chez vous, retourner dans votre
+                        espace
+                        étudiant.</p>
+                    <figure class="mb-6">
+                        <img src="./images/ins_28.png" alt="Espace étudiant" loading="lazy"
+                            class="w-full max-w-2xl mx-auto border rounded-lg shadow-sm">
+                        <figcaption class="text-center text-sm text-gray-500 mt-2">Accès à l'espace étudiant
+                        </figcaption>
+                    </figure>
+
+                    <p class="mb-4 text-gray-700">Vous cliquez sur VOIR LA FICHE pour voir votre nouvelle fiche
+                        avec
+                        votre mail de l'université.<span class="text-red-600">Attention : le mail est généré
+                            lors de
+                            l'inscription mais il n'est pas pour autant opérationnel. Il vous faut contacter
+                            l'administrateur du site USTM pour l'activer. Ce dernier ne le fera que sur
+                            présentation
+                            de votre carte d'étudiant</span>. Vous aurez alors accès à votre fiche
+                        d'inscription.
+                        Vous pouvez alors la télécharger et l'imprimer.</p>
+                    <figure class="mb-6">
+                        <img src="./images/ins_29.png" alt="Fiche étudiante finale" loading="lazy"
+                            class="w-full max-w-2xl mx-auto border rounded-lg shadow-sm">
+                        <figcaption class="text-center text-sm text-gray-500 mt-2">Fiche étudiante complète
+                        </figcaption>
+                    </figure>
+
+                    <h3 class="text-lg font-bold text-gray-800 mb-3">Etape 5.1: Validation finale de
+                        l'inscription
+                    </h3>
+                    <p class="mb-4 text-gray-700">Après avoir payé les frais d'inscription, vous devez vous
+                        rendre
+                        au secrétariat pour valider votre inscription. Vous devez apporter les documents
+                        suivants:
+                    </p>
+                    <ol class="list-decimal pl-6 space-y-2 mb-4 text-gray-700">
+                        <li>Votre fiche circuit</li>
+                        <li>Votre fiche pédagogique</li>
+                        <li>Une copie légalisée de votre acte de naissance</li>
+                        <li>Une copie légalisée de votre attestation de réussite</li>
+                        <li>Une copie de votre certificat de nationalité</li>
+                    </ol>
+                </section>
+            </article>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark foter text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center">
+                            <img src="./iconified/hahouse.png" class="w-6 h-6">
+                        </div>
+                        <span class="text-xl font-bold">AGUA</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">Accompagnement des nouveaux étudiants pour une intégration réussie.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Liens utiles</h3>
+                    <ul class="space-y-2">
+                        <li><a href="http://univ-masuku.ga/inscription/"
+                                class="text-gray-400 hover:text-white transition">Inscription en ligne</a></li>
+                        <li><a href="https://univ-masuku.org/concours/"
+                                class="text-gray-400 hover:text-white transition">Concours <span>EPM / INSAB</span></a>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Visite guidée</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Parrainage</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Événements</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Conseils académiques</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Aide au logement</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Newsletter</h3>
+                    <p class="text-gray-400 mb-4">Abonnez-vous à notre newsletter pour recevoir nos actualités.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Votre email"
+                            class="flex-grow px-4 py-2 bg-gray-700 text-white rounded-l-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                        <button type="submit" class="bg-primary hover:bg-orange-700 px-4 py-2 rounded-r-lg transition">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#"
+                            class="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center hover:bg-blue-600 transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#"
+                            class="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center hover:bg-blue-400 transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#"
+                            class="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center hover:bg-pink-600 transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#"
+                            class="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center hover:bg-blue-700 transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© <span id="year"></span> Les AGUA. Tous droits réservés.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition">Mentions légales</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">Politique de confidentialité</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">Conditions d'utilisation</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Chargement différé des scripts non critiques -->
+    <script src="js/jquery.js" defer></script>
+    <script src="js/jquery.easing-sooper.js" defer></script>
+    <script src="js/jquery.sooperfish.js" defer></script>
+    <script src="js/image_fade.js" defer></script>
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('open');
+        });
+
+        // Gestion des sous-menus mobile
+        document.querySelectorAll('.submenu-toggle').forEach(button => {
+            button.addEventListener('click', () => {
+                const submenu = button.nextElementSibling;
+                submenu.classList.toggle('hidden');
+                const icon = button.querySelector('i');
+                icon.classList.toggle('fa-chevron-down');
+                icon.classList.toggle('fa-chevron-up');
+            });
+        });
+
+        // Bouton retour en haut
+        const backToTopButton = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('visible');
+            } else {
+                backToTopButton.classList.remove('visible');
+            }
+        });
+
+        backToTopButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+
+
+        // Sidebar toggle functionality
+        const sidebar = document.getElementById('sidebar');
+        const sidebarToggle = document.getElementById('sidebarToggle');
+        const mainContent = document.getElementById('mainContent');
+
+        // Toggle sidebar
+        sidebarToggle.addEventListener('click', function () {
+            sidebar.classList.toggle('sidebar-collapsed');
+            sidebar.classList.toggle('sidebar-expanded');
+            sidebarToggle.classList.toggle('sidebar-toggle-rotated');
+            mainContent.classList.toggle('content-with-sidebar');
+            mainContent.classList.toggle('content-full-width');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+// Close mobile menu if open
+mobileMenu.classList.remove('open');
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 20,
+                        behavior: 'smooth'
+                    });
+
+                    // Update active nav item
+                    document.querySelectorAll('.nav-item').forEach(item => {
+                        item.classList.remove('active-nav-item');
+                    });
+                    this.classList.add('active-nav-item');
+                }
+            });
+        });
+
+
+
+        // Highlight active section in sidebar
+        window.addEventListener('scroll', function () {
+            const sections = document.querySelectorAll('section[id]');
+            let currentSection = '';
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+
+                if (window.pageYOffset >= (sectionTop - 100)) {
+                    currentSection = '#' + section.getAttribute('id');
+                }
+            });
+
+            document.querySelectorAll('.nav-item').forEach(item => {
+                item.classList.remove('active-nav-item');
+                if (item.getAttribute('href') === currentSection) {
+                    item.classList.add('active-nav-item');
+                }
+            });
+        });
+
+
+
+        // Hide sidebar on mobile when clicking outside
+        document.addEventListener('click', function (e) {
+            if (window.innerWidth <= 1024 &&
+                !sidebar.contains(e.target) &&
+                e.target !== mobileMenuToggle &&
+                !mobileMenuToggle.contains(e.target)) {
+                sidebar.classList.add('hidden');
+            }
+        });
+
+        // Add shadow to header on scroll
+        window.addEventListener('scroll', function () {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-lg');
+            } else {
+                header.classList.remove('shadow-lg');
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            // Année courante dans le footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logement étudiant - USTM Franceville</title>
+
+    <link rel="stylesheet" href="./css/tailwind.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <style>
+        .doc-card {
+            transition: all 0.3s ease;
+        }
+
+        .doc-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .advantage-item::before {
+            content: "✓";
+            color: #10B981;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
+        .disadvantage-item::before {
+            content: "✗";
+            color: #EF4444;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+        h3 {
+  font-size: 1.6rem;
+  color: var(--accent-color);
+  margin: 20px 0 10px;
+}
+    </style>
+</head>
+
+<body class="bg-gray-100 font-sans antialiased">
+    <!-- Header -->
+    <header class="fixed w-full bg-dark text-white z-50 shadow-lg">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <!-- Logo externe -->
+                    <a href="./index.html" class="external-logo " target="_self" rel="noopener noreferrer">
+                        <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center">
+                            <img src="./iconified/hahouse.png" alt="AGUA" class="w-8 h-8">
+                        </div>
+                        <p class="logo-text">Retour</p>
+                    </a>
+
+                    <div class="flex items-center space-x-2">
+                        <div class="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center">
+                            <i class="fas fa-university text-orange-500"></i>
+                        </div>
+                        <span class="text-xl font-bold logo-text">USTM - Logement</span>
+                    </div>
+                </div>
+
+                <!-- Navigation desktop -->
+                <nav class=" md:block">
+                    <ul class="nav-desktop">
+                        <li>
+                            <a href="ustm.html" class="nav-item">Accueil</a>
+                        </li>
+                        <li class="group">
+                            <a href="#" class="flex items-center gap-1">
+                                Formations
+                                <i class="fas fa-chevron-down text-xs mt-1"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="http://univ-masuku.org">Ecole Doctorale en Sciences Fondamentales
+                                        Appliquées</a></li>
+                                <li><a href="https://ep-masuku.ga">Ecole Polytechnique de Masuku</a></li>
+                                <li><a href="http://univ-masuku.org">Faculté des Sciences</a></li>
+                                <li><a href="http://insab-masuku.org">Institut National Supérieur d'Agronomie et
+                                        de Biotechnologie (INSAB)</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="./inscription.html">Comment s'inscrire</a>
+                        </li>
+                        <li class="selected">
+                            <a href="./logement.html">Logement</a>
+                        </li>
+                        <li>
+                            <a href="./bancarisation.html">Bancarisation</a>
+                        </li>
+                        <li>
+                            <a href="https://univ-masuku.org/concours/">Concours EPM / INSAB</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- Bouton mobile menu -->
+                <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+            <!-- Mobile menu -->
+            <div id="mobile-menu" class="md:hidden bg-gray-700 mt-2 rounded-lg">
+                <div class="px-2 pt-2 pb-4 space-y-1">
+                    <a href="index.html" class="mobile-menu-item">Accueil</a>
+                    <div class="px-3 py-2">
+                        <button
+                            class="flex items-center justify-between w-full text-left mobile-menu-item submenu-toggle">
+                            Formations <i class="fas fa-chevron-down text-xs"></i>
+                        </button>
+                        <div class="mt-1 ml-4 space-y-1 hidden submenu">
+                            <a href="http://univ-masuku.org"
+                                class="block px-3 py-2 rounded text-sm text-gray-300 hover:bg-gray-600">Ecole
+                                Doctorale</a>
+                            <a href="https://ep-masuku.ga"
+                                class="block px-3 py-2 rounded text-sm text-gray-300 hover:bg-gray-600">Ecole
+                                Polytechnique</a>
+                            <a href="http://univ-masuku.org"
+                                class="block px-3 py-2 rounded text-sm text-gray-300 hover:bg-gray-600">Faculté des
+                                Sciences</a>
+                            <a href="http://insab-masuku.org"
+                                class="block px-3 py-2 rounded text-sm text-gray-300 hover:bg-gray-600">INSAB</a>
+                        </div>
+                    </div>
+                    <a href="./inscription.html" class="mobile-menu-item">Comment s'inscrire</a>
+                    <a href="./logement.html" class="mobile-menu-item bg-gray-600 text-orange-400">Logement</a>
+                    <a href="./bancarisation.html" class="mobile-menu-item">Bancarisation</a>
+                    <a href="https://univ-masuku.org/concours/" class="mobile-menu-item">Concours EPM / INSAB</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Bouton retour en haut -->
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-4 bg-gradient-to-r from-orange-50 to-blue-50">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">SE LOGER PENDANT SES ÉTUDES</h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">Tout ce que vous devez savoir sur les logements étudiants
+                à l'USTM Franceville</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12 mt-8">
+        <!-- Hero Image -->
+        <div class="mb-12 rounded-xl overflow-hidden shadow-xl">
+            <img src="./images/cle.jpg" alt="Résidence universitaire USTM" class="w-full h-auto object-cover">
+        </div>
+
+        <!-- Section 1 -->
+        <section class="mb-16 bg-white rounded-xl shadow-md p-8">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+                <i class="fas fa-info-circle text-blue-500 mr-3"></i>
+                Pré-Infos sur le logement à l'USTM
+            </h2>
+
+            <div class="prose max-w-none">
+                <p class="text-lg mb-6">
+                    L'<span class="font-bold text-blue-600">Université des Sciences et Techniques de Masuku
+                        (USTM)</span> à Franceville (Gabon) propose des logements universitaires pour les étudiants
+                    <span class="font-bold">nationaux et étrangers</span>.
+                </p>
+
+                <h3 class="text-xl font-bold mt-8 mb-4 text-orange-600">Équipements de base (selon disponibilité)</h3>
+                <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                    <li class="flex items-start">
+                        <i class="fas fa-bed text-blue-500 mt-1 mr-2"></i>
+                        <span>Lit, bureau, armoire</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-shower text-blue-500 mt-1 mr-2"></i>
+                        <span>Douches communes selon les paliers de l'étage</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-wifi text-blue-500 mt-1 mr-2"></i>
+                        <span>Wi-Fi (parfois payant ou sur demande au rectorat)</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Section 2 -->
+        <section class="mb-16 bg-white rounded-xl shadow-md p-8">
+            <h3 class="text-2xl font-bold text-gray-800 mb-6">1- Logements sur le Campus : Avantages et Inconvénients
+            </h3>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Avantages -->
+                <div class="bg-green-50 p-6 rounded-lg border border-green-200">
+                    <h4 class="text-xl font-bold text-green-700 mb-4 flex items-center">
+                        <i class="fas fa-check-circle mr-2"></i> AVANTAGES
+                    </h4>
+                    <ul class="space-y-3">
+                        <li class="advantage-item"><b>Proximité des cours</b> (pas de frais de transport)</li>
+                        <li class="advantage-item"><b>Prix abordable</b> (moins cher que les logements en ville)</li>
+                        <li class="advantage-item"><b>Sécurité</b> (campus surveillé, accès contrôlé)</li>
+                        <li class="advantage-item"><b>Vie étudiante animée</b> (proximité avec d'autres étudiants,
+                            événements)</li>
+                        <li class="advantage-item"><b>Électricité et eau généralement incluses</b> (selon les
+                            résidences)</li>
+                    </ul>
+                </div>
+
+                <!-- Inconvénients -->
+                <div class="bg-red-50 p-6 rounded-lg border border-red-200">
+                    <h4 class="text-xl font-bold text-red-700 mb-4 flex items-center">
+                        <i class="fas fa-times-circle mr-2"></i> INCONVÉNIENTS
+                    </h4>
+                    <ul class="space-y-3">
+                        <li class="disadvantage-item"><b>Nombre de places limité</b> (priorité souvent aux boursiers et
+                            1ère année)</li>
+                        <li class="disadvantage-item"><b>Confort variable</b> (certaines chambres vétustes, problèmes
+                            d'entretien)</li>
+                        <li class="disadvantage-item"><b>Règles strictes</b> (couvre-feu, interdiction de visiteurs la
+                            nuit)</li>
+                        <li class="disadvantage-item"><b>Problèmes occasionnels</b> (coupures d'eau/électricité, wifi
+                            lent)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Chambre Image -->
+            <div class="mt-8 rounded-xl overflow-hidden shadow-lg">
+                <img src="./images/chambre.jpg" alt="Chambre étudiante USTM" class="w-1/2 h-auto">
+            </div>
+
+            <!-- Attention Box -->
+            <div class="mt-8 bg-yellow-50 border-l-4 border-yellow-400 p-6 rounded-r-lg">
+                <h4 class="text-xl font-bold text-yellow-700 mb-3 flex items-center">
+                    <i class="fas fa-exclamation-triangle mr-2"></i> ATTENTION !
+                </h4>
+                <p class="font-bold">L'attribution des Logements Nationaux et Étrangers</p>
+                <ul class="list-disc pl-5 mt-2 space-y-1">
+                    <li>Priorité aux boursiers (ANBG ou autres aides)</li>
+                    <li>Étudiants étrangers : Peuvent obtenir un logement, mais places limitées</li>
+                    <li>Année d'étude (priorité aux nouveaux étudiants)</li>
+                    <li>Situation financière (boursiers en premier)</li>
+                    <li>Dossier complet (inscription administrative validée)</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Section 3 -->
+        <section class="mb-16 bg-white rounded-xl shadow-md p-8">
+            <h3 class="text-2xl font-bold text-gray-800 mb-6">2- Procédure de résidence au CAMPUS</h3>
+
+            <ol class="steps space-y-4 pl-5 list-decimal">
+                <li class="p-3 bg-gray-50 rounded-lg border-l-4 border-blue-500">S'inscrire administrativement à l'USTM
+                </li>
+                <li class="p-3 bg-gray-50 rounded-lg border-l-4 border-blue-500">Se procurer un certificat médical
+                    datant de moins de trois mois établi exclusivement au Centre Médical de l'USTM</li>
+                <li class="p-3 bg-gray-50 rounded-lg border-l-4 border-blue-500">Compléter le formulaire avec vos
+                    informations</li>
+                <li class="p-3 bg-gray-50 rounded-lg border-l-4 border-blue-500">Joindre une demande manuscrite
+                    (adressée au DG-CNOU)</li>
+                <li class="p-3 bg-gray-50 rounded-lg border-l-4 border-blue-500">Une enveloppe A4</li>
+                <li class="p-3 bg-gray-50 rounded-lg border-l-4 border-blue-500">Déposer le dossier uniquement auprès du
+                    chargé de l'hébergement</li>
+                <li class="p-3 bg-gray-50 rounded-lg border-l-4 border-blue-500">Payer les frais de dossier de 3000 FCFA
+                </li>
+            </ol>
+        </section>
+
+        <!-- Section 4 -->
+        <section class="mb-16 bg-white rounded-xl shadow-md p-8">
+            <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                <i class="fas fa-file-alt text-blue-500 mr-3"></i>
+                3- Documents requis pour tous les étudiants
+            </h3>
+
+            <div class="doc-grid grid md:grid-cols-2 gap-6">
+                <div class="doc-card bg-blue-50 p-6 rounded-lg border border-blue-200">
+                    <h4 class="text-lg font-bold text-blue-700 mb-4">Documents obligatoires</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                            <span>Une photo d'identité</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                            <span>Une copie de l'acte de naissance</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                            <span>Une copie d'attestation de réussite au baccalauréat</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                            <span>Une copie de l'attestation de bourse</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                            <span>Une enveloppe A4</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5 -->
+        <section class="mb-16 bg-white rounded-xl shadow-md p-8">
+            <h3 class="text-2xl font-bold text-gray-800 mb-6">4- Règlement Intérieur du Campus (USTM Franceville)</h3>
+
+            <div class="prose max-w-none">
+                <p>Le règlement peut varier, mais voici les règles <span class="font-bold">généralement
+                        appliquées</span> :</p>
+
+                <h4 class="text-xl font-bold mt-6 mb-3 text-blue-600 flex items-center">
+                    <i class="fas fa-users mr-2"></i> Vie en Résidence Universitaire
+                </h4>
+                <ul class="list-disc pl-5 space-y-1 mb-6">
+                    <li><b>Heures de visite</b> : Souvent limitées (ex : 8h-20h)</li>
+                    <li><b>Couvre-feu</b> : Retour obligatoire avant une certaine heure (ex : 22h-23h)</li>
+                    <li><b>Interdictions</b> :
+                        <ul class="list-disc pl-5 mt-1">
+                            <li>Bruit excessif (musique forte la nuit)</li>
+                            <li>Consommation d'alcool/drogues</li>
+                            <li>Hébergement de personnes extérieures non autorisées</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h4 class="text-xl font-bold mt-6 mb-3 text-blue-600 flex items-center">
+                    <i class="fas fa-broom mr-2"></i> Entretien et Propreté
+                </h4>
+                <ul class="list-disc pl-5 space-y-1 mb-6">
+                    <li><b>Nettoyage</b> : Responsabilité des étudiants (sanitaires partagés)</li>
+                    <li><b>Dégâts</b> : Facturés en cas de casse volontaire</li>
+                </ul>
+
+                <h4 class="text-xl font-bold mt-6 mb-3 text-blue-600 flex items-center">
+                    <i class="fas fa-gavel mr-2"></i> Sanctions en cas de Non-Respect
+                </h4>
+                <p><b>Avertissement → Expulsion temporaire ou définitive</b> en cas de récidive</p>
+            </div>
+        </section>
+
+        <!-- Section 6 -->
+        <section class="mb-16 bg-white rounded-xl shadow-md p-8">
+            <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                <i class="fas fa-lightbulb text-yellow-500 mr-3"></i>
+                Conseils pratiques
+            </h3>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-yellow-50 p-4 rounded-lg border border-yellow-200">
+                    <h4 class="font-bold text-yellow-700 mb-2">Se renseigner tôt</h4>
+                    <p>Les places partent vite, ne tardez pas à constituer votre dossier</p>
+                </div>
+                <div class="bg-yellow-50 p-4 rounded-lg border border-yellow-200">
+                    <h4 class="font-bold text-yellow-700 mb-2">Prévoir un plan B</h4>
+                    <p>Envisagez la colocation en ville si vous n'obtenez pas de place</p>
+                </div>
+                <div class="bg-yellow-50 p-4 rounded-lg border border-yellow-200">
+                    <h4 class="font-bold text-yellow-700 mb-2">Respecter le règlement</h4>
+                    <p>C'est la clé pour éviter les problèmes durant votre séjour</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 7 -->
+        <section class="mb-16 bg-white rounded-xl shadow-md p-8">
+            <h3 class="text-2xl font-bold text-gray-800 mb-6">II- Logements dans les quartiers</h3>
+            <p class="text-gray-600">(Contenu à développer sur les options de logement hors campus)</p>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="bg-blue-50 rounded-xl shadow-md p-8">
+            <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                <i class="fas fa-address-card text-blue-500 mr-3"></i>
+                Contact du CNOU
+            </h3>
+
+            <div class="contact-info grid md:grid-cols-2 gap-6">
+                <div>
+                    <h4 class="font-bold text-blue-700 mb-2 flex items-center">
+                        <i class="fas fa-map-marker-alt mr-2"></i> Adresse
+                    </h4>
+                    <p>USTM, Bâtiment Administratif, au sein du campus de l'USTM</p>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-blue-700 mb-2 flex items-center">
+                        <i class="fas fa-envelope mr-2"></i> Email
+                    </h4>
+                    <p>cnou@education.ga</p>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-blue-700 mb-2 flex items-center">
+                        <i class="fas fa-clock mr-2"></i> Horaires
+                    </h4>
+                    <p>Lundi-vendredi 7h30-15h30 avec une pause entre 12h-14h parfois</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer class="bg-dark text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center">
+                            <img src="./iconified/hahouse.png" class="w-6 h-6">
+                        </div>
+                        <span class="text-xl font-bold">AGUA</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">Accompagnement des nouveaux étudiants pour une intégration réussie.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Liens rapides</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#accueil" class="text-gray-400 hover:text-white transition">Accueil</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition">Services</a></li>
+                        <li><a href="#apropos" class="text-gray-400 hover:text-white transition">À propos</a></li>
+                        <li><a href="#fondateurs" class="text-gray-400 hover:text-white transition">Fondateurs</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Visite guidée</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Parrainage</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Événements</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Conseils académiques</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Aide au logement</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Newsletter</h3>
+                    <p class="text-gray-400 mb-4">Abonnez-vous à notre newsletter pour recevoir nos actualités.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Votre email"
+                            class="flex-grow px-4 py-2 bg-gray-700 text-white rounded-l-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                        <button type="submit" class="bg-primary hover:bg-orange-700 px-4 py-2 rounded-r-lg transition">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#"
+                            class="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center hover:bg-blue-600 transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#"
+                            class="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center hover:bg-blue-400 transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#"
+                            class="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center hover:bg-pink-600 transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#"
+                            class="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center hover:bg-blue-700 transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© <span id="year"></span> Les AGUA. Tous droits réservés.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition">Mentions légales</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">Politique de confidentialité</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">Conditions d'utilisation</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/common.js"></script>
+</body>
+
+</html>
