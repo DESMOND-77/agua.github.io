@@ -5,16 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>USTM - Université des Sciences et Techniques de Masuku</title>
-  <meta name="description" content="Site officiel de l'Université des Sciences et Techniques de Masuku (USTM) au Gabon">
+  <meta name="description" content="USTM - Université des Sciences et Techniques de Masuku">
   <meta name="keywords" content="USTM, université Gabon, formations scientifiques, EPM, INSAB">
   <meta name="author" content="GUIMAPI Desmond">
-  <meta name="robots" content="noindex,nofollow">
-  <meta name="googlebot" content="noindex,nofollow">
 
   <link rel="shortcut icon" href="./iconified/hahouse.png">
-
   <link rel="stylesheet" href="./css/style.css">
-  <link rel="stylesheet" href="./css/tailwind.css">
   <link rel="stylesheet" href="./css/common.css">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -23,24 +19,27 @@
 </head>
 
 <body>
-  <!-- <div id="main"> -->
+
   <header class="fixed w-full bg-dark z-50 top-0 shadow-lg">
     <div class="container mx-auto px-6 py-4">
       <div class="flex justify-between items-center">
         <div class="flex items-center space-x-2">
-          <!-- Logo externe -->
-          <a href="./index.html" class="external-logo " target="_self" rel="noopener noreferrer">
-            <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center">
-              <img src="./iconified/hahouse.png" alt="AGUA" class="w-8 h-8">
-            </div>
-            <span class="logo-text">Retour</span>
-          </a>
+          <div class="flex items-center space-x-2">
+            <!-- Logo externe -->
+            <a href="./index.html" class="external-logo " target="_self" rel="noopener noreferrer">
+              <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center">
+                <img src="./iconified/hahouse.png" alt="AGUA" class="w-8 h-8">
+              </div>
+              <p class="logo-text">Retour</p>
+            </a>
 
-          <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center">
-            <i class="fas fa-bank text-orange-500"></i>
+            <div class="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center">
+              <i class="fas fa-university text-orange-500"></i>
+            </div>
           </div>
           <span class="text-xl font-bold logo-text">USTM</span>
         </div>
+
         <!-- Navigation desktop -->
         <nav class="md:block">
           <ul class="nav-desktop">
@@ -81,11 +80,10 @@
           <i class="fas fa-bars text-2xl"></i>
         </button>
       </div>
-
       <!-- Mobile menu -->
       <div id="mobile-menu" class="md:hidden bg-gray-700 mt-2 rounded-lg">
         <div class="px-2 pt-2 pb-4 space-y-1 justify-center">
-          <a href="index.html" class="mobile-menu-item">Accueil</a>
+          <a href="index.html" class="mobile-menu-item text-orange-400">Accueil</a>
           <div class="px-3 py-2">
             <button class="flex items-center justify-between w-full text-left mobile-menu-item">
               Formations <i class="fas fa-chevron-down text-xs"></i>
@@ -106,7 +104,7 @@
           </div>
           <a href="./inscription.html" class="mobile-menu-item">Comment s'inscrire</a>
           <a href="./logement.html" class="mobile-menu-item">Logement</a>
-          <a href="./bancarisation.html" class="mobile-menu-item bg-gray-600 text-orange-400">Bancarisation</a>
+          <a href="./bancarisation.html" class="mobile-menu-item bg-gray-600 ">Bancarisation</a>
           <a href="https://univ-masuku.org/concours/" class="mobile-menu-item">Concours EPM / INSAB</a>
         </div>
       </div>
@@ -172,24 +170,31 @@
           <h3>Organisation de l'USTM</h3>
           <p>L'USTM est aujourd'hui composée de plusieurs établissements :</p>
           <ul class="mx-3 my-2">
-            <li class="ml-7 list-disc mb-2 text-blue-800 hover:underline"><a href="http://univ-masuku.org">Ecole Doctorale en Sciences Fondamentales
+            <li class="ml-7 list-disc mb-2 text-blue-800 hover:underline"><a href="http://univ-masuku.org">Ecole
+                Doctorale en Sciences Fondamentales
                 Appliquées</a></li>
-            <li class="ml-7 list-disc mb-2 text-blue-800 hover:underline"><a href="https://ep-masuku.ga"> École polytechnique de Masuku (EPM) (génie
+            <li class="ml-7 list-disc mb-2 text-blue-800 hover:underline"><a href="https://ep-masuku.ga"> École
+                polytechnique de Masuku (EPM) (génie
                 civil, électromécanique, réseau et télécommunication,
                 informatique industrielle, maintenance industrielle.)</a></li>
-            <li class="ml-7 list-disc mb-2 text-blue-800 hover:underline"><a href="http://univ-masuku.org">Faculté des sciences (chimie, biologie,
+            <li class="ml-7 list-disc mb-2 text-blue-800 hover:underline"><a href="http://univ-masuku.org">Faculté des
+                sciences (chimie, biologie,
                 géologie, mathématiques-physique, physique-chimie.)</a></li>
-            <li class="ml-7 list-disc mb-2 text-blue-800 hover:underline"><a href="http://insab-masuku.org">Institut National Supérieur d’Agronomie et
+            <li class="ml-7 list-disc mb-2 text-blue-800 hover:underline"><a href="http://insab-masuku.org">Institut
+                National Supérieur d’Agronomie et
                 de Biotechnologies (INSAB) (Productions Animales, Productions
                 Végétales, Agroéconomie, Génie industrielle et Alimentaire)</a></li>
           </ul>
-          <p class="my-3">Ces établissements sont organisés en départements et laboratoires de recherche. Ils sont dotés de
+          <p class="my-3">Ces établissements sont organisés en départements et laboratoires de recherche. Ils sont dotés
+            de
             bibliothèques, de salles de cours, de laboratoires et d'équipements modernes pour assurer une formation
             de qualité.</p>
-          <p class="my-3">Le campus de l'USTM est également un lieu de vie étudiante dynamique, avec des activités culturelles,
+          <p class="my-3">Le campus de l'USTM est également un lieu de vie étudiante dynamique, avec des activités
+            culturelles,
             sportives et associatives. Les étudiants peuvent participer à des clubs, des événements et des
             compétitions pour développer leurs compétences et leur esprit d'équipe.</p>
-          <p class="my-3">En somme, l'USTM est un établissement d'enseignement supérieur de premier plan au Gabon, offrant une
+          <p class="my-3">En somme, l'USTM est un établissement d'enseignement supérieur de premier plan au Gabon,
+            offrant une
             formation de qualité dans les domaines scientifiques et techniques. Son campus moderne et dynamique
             constitue un environnement propice à l'apprentissage et à l'épanouissement personnel des étudiants.</p>
         </section>
@@ -200,9 +205,11 @@
             l'université.</p>
           <h3 class="font-semibold">Objectifs :</h3>
           <ul class="my-2">
-            <li class="ml-7 list-disc mb-2">Revisiter les offres de formation et curricula pour les adapter aux besoins du monde socio-économique
+            <li class="ml-7 list-disc mb-2">Revisiter les offres de formation et curricula pour les adapter aux besoins
+              du monde socio-économique
               avec les partenaires industriels</li>
-            <li class="ml-7 list-disc mb-2">Développer un partenariat interactif pour plus d'ouverture de l'université avec le monde industriel
+            <li class="ml-7 list-disc mb-2">Développer un partenariat interactif pour plus d'ouverture de l'université
+              avec le monde industriel
             </li>
           </ul>
         </section>

@@ -152,12 +152,11 @@
 /* Logo externe */
 .external-logo {
     transition: transform 0.3s ease;
-    left: 5px;
-    position: absolute;
+    transform: scale(.7);
 }
 
 .external-logo:hover {
-    transform: scale(1.1);
+    transform: scale(1);
 }
 
 @media (max-width: 1024px) {
@@ -194,6 +193,10 @@
     }
     .doc-grid {
         grid-template-columns: 1fr;
+    }
+    .sidebar {
+        display: none;
+     
     }
 }
 

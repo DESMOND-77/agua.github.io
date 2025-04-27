@@ -5,8 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Logement étudiant - USTM Franceville</title>
+    <meta name="description" content="Logement étudiant - USTM Franceville">
+    <meta name="keywords" content="logement, USTM, CNOU,  université Gabon">
+    <meta name="author" content="GUIMAPI Desmond">
+    <link rel="shortcut icon" href="./iconified/hahouse.png">
 
-    <link rel="stylesheet" href="./css/tailwind.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/common.css">
@@ -33,11 +36,12 @@
             font-weight: bold;
             margin-right: 0.5rem;
         }
+
         h3 {
-  font-size: 1.6rem;
-  color: var(--accent-color);
-  margin: 20px 0 10px;
-}
+            font-size: 1.6rem;
+            color: var(--accent-color);
+            margin: 20px 0 10px;
+        }
     </style>
 </head>
 
@@ -46,21 +50,21 @@
     <header class="fixed w-full bg-dark text-white z-50 shadow-lg">
         <div class="container mx-auto px-6 py-4">
             <div class="flex justify-between items-center">
-                <div class="flex items-center space-x-4">
-                    <!-- Logo externe -->
-                    <a href="./index.html" class="external-logo " target="_self" rel="noopener noreferrer">
-                        <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center">
-                            <img src="./iconified/hahouse.png" alt="AGUA" class="w-8 h-8">
-                        </div>
-                        <p class="logo-text">Retour</p>
-                    </a>
-
+                <div class="flex items-center space-x-2">
                     <div class="flex items-center space-x-2">
+                        <!-- Logo externe -->
+                        <a href="./index.html" class="external-logo " target="_self" rel="noopener noreferrer">
+                            <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center">
+                                <img src="./iconified/hahouse.png" alt="AGUA" class="w-8 h-8">
+                            </div>
+                            <p class="logo-text">Retour</p>
+                        </a>
+
                         <div class="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center">
                             <i class="fas fa-university text-orange-500"></i>
                         </div>
-                        <span class="text-xl font-bold logo-text">USTM - Logement</span>
                     </div>
+                    <span class="text-xl font-bold logo-text">USTM - Logement</span>
                 </div>
 
                 <!-- Navigation desktop -->
@@ -103,7 +107,6 @@
                     <i class="fas fa-bars text-2xl"></i>
                 </button>
             </div>
-
             <!-- Mobile menu -->
             <div id="mobile-menu" class="md:hidden bg-gray-700 mt-2 rounded-lg">
                 <div class="px-2 pt-2 pb-4 space-y-1">
@@ -132,6 +135,7 @@
                     <a href="./bancarisation.html" class="mobile-menu-item">Bancarisation</a>
                     <a href="https://univ-masuku.org/concours/" class="mobile-menu-item">Concours EPM / INSAB</a>
                 </div>
+
             </div>
         </div>
     </header>

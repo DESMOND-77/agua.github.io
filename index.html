@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html lang="fr">
-<!-- npx tailwindcss -i ./input.css -o ./tailwind.css --watch  -->
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AGUA - Accompagnement des nouveaux étudiants</title>
-    <!-- <link rel="stylesheet" href="tailwind.css"> -->
-    <link rel="stylesheet" href="./css/tailwind.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="./css/common.css">
@@ -25,7 +22,6 @@
             border: 1px solid #F67400;
         }
 
-
         #mobile-menu.open {
             max-height: 500px;
         }
@@ -38,7 +34,7 @@
 </head>
 
 <body class="bg-gray-100 font-sans antialiased">
-    <!-- Header avec navigation -->
+    <!-- Header -->
     <header class="fixed  w-full bg-dark z-50 transition-all  duration-300">
         <div class="container mx-auto px-6 py-3">
             <div class="flex items-center justify-between">
@@ -53,26 +49,29 @@
                 <!-- Navigation desktop -->
                 <nav class="hidden md:flex items-center space-x-8">
                     <a href="#accueil"
-                        class="text-gray-300 nav-item hover:text-orange-400 transition duration-300 font-medium">Accueil</a>
+                        class="text-gray-300 px-2 py-2 rounded-md nav-item hover:text-orange-400 hover:bg-gray-900 transition duration-300 font-medium">Accueil</a>
                     <a href="#services"
-                        class="text-gray-300 nav-item hover:text-orange-400 transition duration-300 font-medium">Services</a>
+                        class="text-gray-300 px-2 py-2 rounded-md nav-item hover:text-orange-400 hover:bg-gray-900 transition duration-300 font-medium">Services</a>
                     <a href="#apropos"
-                        class="text-gray-300 nav-item hover:text-orange-400 transition duration-300 font-medium">À
+                        class="text-gray-300 px-2 py-2 rounded-md nav-item hover:text-orange-400 hover:bg-gray-900 transition duration-300 font-medium">À
                         propos</a>
                     <a href="#fondateurs"
-                        class="text-gray-300 nav-item hover:text-orange-400 transition duration-300 font-medium">Fondateurs</a>
+                        class="text-gray-300 px-2 py-2 rounded-md nav-item hover:text-orange-400 hover:bg-gray-900 transition duration-300 font-medium">Fondateurs</a>
                     <a href="#contact"
-                        class="text-gray-300 nav-item hover:text-orange-400 transition duration-300 font-medium">Contact</a>
-                    <div class="px-3 py-2">
-                        <button class="flex items-center justify-between w-full text-left mobile-menu-item submenu-tgl">
+                        class="text-gray-300 px-2 py-2 rounded-md nav-item hover:text-orange-400 hover:bg-gray-900 transition duration-300 font-medium">Contact</a>
+                  
+
+                    <div class="block px-2 py-2 rounded-md  hover:bg-gray-900">
+                        <button
+                            class="flex items-center justify-between w-full text-base rounded-md font-medium text-gray-300 hover:text-orange-400 submenu-tgl">
                             Etablissements <i class="fas fa-chevron-down text-xs"></i>
                         </button>
                         <div class="mt-1 ml-4 space-y-1 hidden submenu">
                             <a href="./ustm.html"
-                                class="block px-3 py-2 rounded text-sm text-gray-300 hover:bg-gray-600">USTM</a>
-                            <a href="#" class="block px-3 py-2 rounded text-sm text-gray-300 hover:bg-gray-600">UOB</a>
+                                class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-gray-700">USTM</a>
 
                         </div>
+                    </div>
                 </nav>
 
                 <!-- Bouton mobile menu -->
@@ -95,19 +94,20 @@
                         class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-gray-700">Fondateurs</a>
                     <a href="#contact"
                         class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-gray-700">Contact</a>
-                    <div class="px-3 py-2">
-                        <button class="flex items-center justify-between w-full text-left mobile-menu-item submenu-tgl">
+                    <div class="block px-3 py-2 rounded-md  hover:bg-gray-900">
+                        <button
+                            class="flex items-center justify-between w-full text-base rounded-md font-medium text-gray-300 submenu-tgl">
                             Etablissements <i class="fas fa-chevron-down text-xs"></i>
                         </button>
                         <div class="mt-1 ml-4 space-y-1 hidden submenu">
                             <a href="./ustm.html"
-                                class="block px-3 py-2 rounded text-sm text-gray-300 hover:bg-gray-600">USTM</a>
-                            <a href="#" class="block px-3 py-2 rounded text-sm text-gray-300 hover:bg-gray-600">UOB</a>
+                                class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-gray-700">USTM</a>
 
                         </div>
+                    </div>
+                   
                 </div>
             </div>
-        </div>
     </header>
 
     <!-- Section Hero -->
@@ -318,7 +318,8 @@
                         <p class="text-gray-600 ">Étudiante passionnée, Kourtney met son expertise pédagogique
                             <br>au service
                             de l'USTM pour créer un programme d'accompagnement innovant, facilitant l'intégration et
-                            améliorant la vie étudiante.</p>
+                            améliorant la vie étudiante.
+                        </p>
                         <div class="flex mt-4 space-x-3">
                             <a href="#"
                                 class="w-8 h-8 text-gray-500 bg-blue-100 rounded-full flex items-center justify-center hover:text-purple-500 hover:bg-blue-200 transition"><i
@@ -450,7 +451,7 @@
                 <div>
                     <div class="flex items-center space-x-2 mb-4">
                         <div class="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center">
-                            <img src="./iconified/hahouse.png" class="w-6 h-6">
+                            <img src="./templ/iconified/hahouse.png" class="w-6 h-6">
                         </div>
                         <span class="text-xl font-bold">AGUA</span>
                     </div>

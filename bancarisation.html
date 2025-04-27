@@ -5,16 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bancarisation et Bourses USTM Franceville</title>
+    <meta name="description"
+        content=" Procédure de bancarisation et paiement des bourses pour les étudiants de l'USTM Franceville.">
+    <meta name="keywords" content="bancarisation USTM, BICIG, université Gabon">
+    <meta name="author" content="GUIMAPI Desmond">
+    <link rel="shortcut icon" href="./iconified/hahouse.png">
+
     <link rel="stylesheet" href="./css/style.css">
-    
-    <link rel="stylesheet" href="./css/tailwind.css">
     <link rel="stylesheet" href="./css/common.css">
-    <!-- <link rel="stylesheet" href="../tailwind.css"> -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
-       
         .container {
             max-width: 100%;
             margin: 0 auto;
@@ -102,20 +104,22 @@
         <div class="container mx-auto px-6 py-4">
             <div class="flex justify-between items-center">
                 <div class="flex items-center space-x-2">
-                    <!-- Logo externe -->
-                    <a href="./index.html" class="external-logo " target="_blank">
-                        <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center">
-                            <img src="./iconified/hahouse.png" alt="Logo AGUA" class="w-8 h-8 ">
-
-                        </div>
-                        <p class="logo-text">Retour</p>
-                    </a>
                     <div class="flex items-center space-x-2">
+                        <!-- Logo externe -->
+                        <a href="./index.html" class="external-logo " target="_self" rel="noopener noreferrer">
+                            <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center">
+                                <img src="./iconified/hahouse.png" alt="AGUA" class="w-8 h-8">
+                            </div>
+                            <p class="logo-text">Retour</p>
+                        </a>
+
                         <div class="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center">
                             <i class="fas fa-university text-orange-500"></i>
                         </div>
-                        <span class="text-xl font-bold logo-text">Bancarisation</span>
-                    </div></div>
+                    </div>
+                    <span class="text-xl font-bold logo-text">Bancarisation</span>
+                </div>
+
 
                 <!-- Navigation desktop -->
                 <nav class="md:block">
@@ -151,14 +155,12 @@
                         </li>
                     </ul>
                 </nav>
-
-
                 <!-- Bouton mobile menu -->
                 <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
                     <i class="fas fa-bars text-2xl"></i>
                 </button>
-            </div>
 
+            </div>
             <!-- Mobile menu -->
             <div id="mobile-menu" class="md:hidden bg-gray-700 mt-2 rounded-lg">
                 <div class="px-2 pt-2 pb-4 space-y-1">
@@ -183,8 +185,8 @@
                         </div>
                     </div>
                     <a href="./inscription.html" class="mobile-menu-item">Comment s'inscrire</a>
-                    <a href="./logement.html" class="mobile-menu-item bg-gray-600 text-orange-400">Logement</a>
-                    <a href="./bancarisation.html" class="mobile-menu-item">Bancarisation</a>
+                    <a href="./logement.html" class="mobile-menu-item bg-gray-600 ">Logement</a>
+                    <a href="./bancarisation.html" class="mobile-menu-item text-orange-400">Bancarisation</a>
                     <a href="https://univ-masuku.org/concours/" class="mobile-menu-item">Concours EPM / INSAB</a>
                 </div>
             </div>
@@ -197,13 +199,13 @@
     </a>
 
     <!-- Hero Section -->
-    <section class="pt-32 pb-20 px-4 bg-gradient-to-r from-orange-50 to-blue-50">
+    <section class="pt-32 pb-2 px-4 bg-gradient-to-r from-orange-50 to-blue-50">
         <div class="container mx-auto text-center">
             <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">Procédure de Bancarisation et Paiement des
                 Bourses</h1>
         </div>
     </section>
-    <div class="container mt-32">
+    <div class="container mt-20">
         <section class="section">
             <h2>I. Bancarisation des Étudiants : Accès aux Services Financiers</h2>
 
@@ -219,7 +221,7 @@
 
             <h3>2. Conditions selon la Nationalité</h3>
 
-            <div class="comparison-div">
+            <div class="comparison-div grid grid-cols-1 gap-4">
                 <div class="comparison-col">
                     <h4>Étudiants Gabonais (Nationaux)</h4>
                     <p><strong>Obligation</strong> : Ouverture d'un compte bancaire dans une banque partenaire du
@@ -483,57 +485,7 @@
             </div>
         </div>
     </footer>
-    <script>
-        // Mobile menu toggle
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Gestion des sous-menus mobile
-        document.querySelectorAll('.submenu-toggle').forEach(button => {
-            button.addEventListener('click', () => {
-                const submenu = button.nextElementSibling;
-                submenu.classList.toggle('hidden');
-                const icon = button.querySelector('i');
-                icon.classList.toggle('fa-chevron-down');
-                icon.classList.toggle('fa-chevron-up');
-            });
-        });
-
-        // Bouton retour en haut
-        const backToTopButton = document.getElementById('backToTop');
-
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                backToTopButton.classList.add('visible');
-            } else {
-                backToTopButton.classList.remove('visible');
-            }
-        });
-
-        backToTopButton.addEventListener('click', (e) => {
-            e.preventDefault();
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-        // Année dans le footer
-        document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
+    <script src="./js/common.js" defer> </script>
 </body>
 
 </html>

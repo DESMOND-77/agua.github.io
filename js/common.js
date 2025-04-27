@@ -59,5 +59,14 @@
           }
       });
   });
+          // Add shadow to header on scroll
+          window.addEventListener('scroll', function () {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-lg');
+            } else {
+                header.classList.remove('shadow-lg');
+            }
+        });
   // Année dans le footer
   document.getElementById('year').textContent = new Date().getFullYear();
